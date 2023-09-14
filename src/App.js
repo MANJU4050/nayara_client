@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
-
+import SharedComponent from "./components/SharedComponent";
+import AddCandidate from "./components/AddCandidate";
+import PickWinner from "./components/PickWinner";
+import Winners from "./components/Winners";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./components/Home";
+import Registration from "./components/Registration";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<SharedComponent />} >
+        <Route index element={<Home/>} />
+        <Route path="addcandidate" element={<AddCandidate/>} />
+        <Route path="pickwinner" element={<PickWinner />} />
+        <Route path="winners" element={<Winners/>}/>
+        </Route>
+        <Route path="register" element={<Registration/>} />
+      </Routes>
+    </Router>
   );
 }
 

@@ -1,0 +1,51 @@
+.table-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh-60px);
+  }
+  
+  .beautiful-table {
+    width: 100%;
+    max-width: 800px; /* You can set a max-width if you like */
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 18px;
+    text-align: left;
+  }
+  
+  .beautiful-table th,
+  .beautiful-table td {
+    border-bottom: 1px solid #ddd;
+    padding: 14px 20px;
+  }
+  
+  .beautiful-table thead {
+    background-color: #f2f2f2;
+  }
+  
+  .beautiful-table tbody tr:nth-child(even) {
+    background-color: #f6f6f6;
+  }
+  
+  .beautiful-table tbody tr:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .beautiful-table th {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .beautiful-table {
+      font-size: 16px;
+    }
+  
+    .beautiful-table th,
+    .beautiful-table td {
+      padding: 12px 15px;
+    }
+  }
+  

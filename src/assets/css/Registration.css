@@ -1,0 +1,8 @@
+.errormessage {
+display: flex;
+justify-content: center;
+}
+
+.errormessage p {
+    color: rgb(219, 46, 46);
+}
