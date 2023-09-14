@@ -1,0 +1,120 @@
+body {
+  background: rgb(70, 72, 73);
+  background: -moz-linear-gradient(
+    180deg,
+    rgba(70, 72, 73, 1) 0%,
+    rgba(16, 17, 19, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    180deg,
+    rgba(70, 72, 73, 1) 0%,
+    rgba(16, 17, 19, 1) 100%
+  );
+  background: linear-gradient(
+    180deg,
+    rgba(70, 72, 73, 1) 0%,
+    rgba(16, 17, 19, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#464849",endColorstr="#101113",GradientType=1);
+
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+@media screen and (max-width: 768px) {
+  .maincontainer {
+    margin-top: 120px;
+    height: 500px;
+    width: 350px;
+    background-color: #27272a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    border-radius: 10px;
+  }
+
+  .loginheading h1 {
+    color: #5b5c5c;
+    font-size: 3rem;
+  }
+
+  .loginbutton {
+    background-color: #090a0c;
+    color: white;
+    width: 200px;
+    height: 45px;
+    font-size: 1.7rem;
+    border-radius: 4px;
+    margin-top: 20px;
+  }
+
+  .logininput {
+    width: 300px;
+    height: 50px;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  .logininput::placeholder {
+    text-align: center;
+    font-size: 1rem;
+  }
+  .nayara {
+    width: 100px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .maincontainer {
+    margin-top: 130px;
+    margin-left: 450px;
+    width: 1000px;
+    background-color: #27272a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .loginheading h1 {
+    color: #5b5c5c;
+    font-size: 3rem;
+  }
+
+  .loginbutton {
+    width: 200px;
+    height: 45px;
+    font-size: 1.7rem;
+    border-radius: 4px;
+    background-color: #a3a3a3;
+    color: black;
+    border: 1px solid black;
+    font-weight: bold;
+  }
+
+  .loginbutton:hover {
+    border: 1px solid whitesmoke;
+    color: white;
+    background-color: #090a0c;
+  }
+
+  .logininput {
+    width: 300px;
+    height: 50px;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  .logininput::placeholder {
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .nayara {
+    width: 200px;
+  }
+}

@@ -65,20 +65,18 @@ const DataTable = () => {
   const vehicleList = vehicles?.map((vehicle) => {
     const dateObject = new Date(vehicle?.registrationDate);
 
-    // Extract individual date components
     const day = String(dateObject.getDate()).padStart(2, "0");
-    const month = String(dateObject.getMonth() + 1).padStart(2, "0"); // Months are 0-indexed
-    const year = String(dateObject.getFullYear()).slice(-2); // Get the last 2 digits of the year
+    const month = String(dateObject.getMonth() + 1).padStart(2, "0");
+    const year = String(dateObject.getFullYear()).slice(-2);
 
-    // Format the date in "dd-mm-yy" format
     const localDate = `${day}-${month}-${year}`;
 
-    // Format the time in "HH:mm am/pm" format
     const localTime = dateObject.toLocaleTimeString([], {
       hour: "2-digit",
       minute: "2-digit",
-      hour12: true, // Use 12-hour time format with AM/PM
+      hour12: true,
     });
+
     return (
       <tr key={vehicle?._id}>
         <td>{vehicle?.name}</td>
@@ -92,9 +90,19 @@ const DataTable = () => {
 
   return (
     <>
-      <div style={{width:"100%",display:"flex",justifyContent:"center",gap:"200px",backgroundColor:"black",height:"100px",alignItems:"center"}}>
-        <div style={{color:"white",fontSize:"4rem"}}>{today}</div>
-        <div style={{color:"white",fontSize:"4rem"}}>{total}</div>
+      <div
+        style={{
+          width: "100%",
+          display: "flex",
+          justifyContent: "center",
+          gap: "200px",
+          backgroundColor: "black",
+          height: "100px",
+          alignItems: "center",
+        }}
+      >
+        <div style={{ color: "white", fontSize: "4rem" }}>{today}</div>
+        <div style={{ color: "white", fontSize: "4rem" }}>{total}</div>
       </div>
       <div className="table-wrapper">
         <table className="beautiful-table">

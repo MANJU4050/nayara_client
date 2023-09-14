@@ -1,7 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Formik } from "formik";
 import * as Yup from "yup";
 import { addVehicleApi } from "../api/vehicles";
+import nayara from "../assets/images/nayara.jpg";
+import styles from "../assets/css/modules/Registration.module.css";
+import { Spinner } from "react-bootstrap";
 
 import "./styles/css/main.css";
 import "./styles/css/util.css";
@@ -17,17 +20,23 @@ const validationSchema = Yup.object({
 });
 
 const Registration = () => {
+  const [isLoad, setIsLoad] = useState(false);
   const initialValues = {
     name: "",
     mobile: "",
     vehicleNumber: "",
   };
 
-  const handleSubmit = async (values, onSubmitProps) => {
+  const handleSubmit = async (values, { resetForm }) => {
     try {
-      const response = await addVehicleApi(values);
-      console.log(response);
+      setIsLoad(true);
+      await addVehicleApi(values).then(() => {
+        alert("Successfully registered");
+        resetForm();
+        setIsLoad(false);
+      });
     } catch (error) {
+      setIsLoad(false);
       console.log(error.response.data.error);
       alert(error.response.data.error);
     }
@@ -38,11 +47,17 @@ const Registration = () => {
       <div
         className="container-login100"
         style={{
-          
-            background: "#09203f",
-            background: "linear-gradient(to top, #09203f 0%, #537895 100%)"
+          background: "#09203f",
+          background: "linear-gradient(to top, #09203f 0%, #537895 100%)",
         }}
       >
+        <div className={styles.headcontainer}>
+          <img src={nayara} alt="nayara" className={styles.nayara} />
+          <div className={styles.nanmanda}>
+            NANMANDA FUELS MEGA PRIZE CONTEST
+          </div>
+        </div>
+
         <div className="wrap-login100">
           <Formik
             initialValues={initialValues}
@@ -132,7 +147,7 @@ const Registration = () => {
 
                 <div className="container-login100-form-btn">
                   <button className="login100-form-btn" type="submit">
-                    Register
+                    {isLoad ? <Spinner /> : "Register"}
                   </button>
                 </div>
               </form>

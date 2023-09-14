@@ -23,14 +23,14 @@ function QRCodeGenerator() {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          backgroundColor:"white"
         }}
       >
         {inputText && (
           <QRCode
             value={inputText}
             size={384}
-            bgColor={"#1cceb1"}
-            fgColor={"#652dcd"}
+            
           />
         )}
       </div>
