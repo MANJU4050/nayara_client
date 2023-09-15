@@ -13,7 +13,7 @@ function QRCodeGenerator() {
     <div>
       <h1>QR Code Generator</h1>
       <input
-      style={{width:"500px"}}
+      style={{width:"600px"}}
         type="text"
         placeholder="Enter text"
         value={inputText}
@@ -21,7 +21,7 @@ function QRCodeGenerator() {
       />
       <div
         style={{
-          height: "600px",
+          height: "700px",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",

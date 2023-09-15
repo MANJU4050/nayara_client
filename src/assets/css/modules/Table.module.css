@@ -26,6 +26,13 @@
 
   }
 
+  .tabular{
+    display: flex;
+    width: 100px;
+    justify-content: center;
+    align-items: center;
+  }
+
   .body{
     display: flex;
     flex-direction: column;

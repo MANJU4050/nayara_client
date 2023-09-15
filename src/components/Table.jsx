@@ -1,12 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styles from "../assets/css/modules/Table.module.css";
-import { getVehicles } from "../api/vehicles";
 
 const Table = ({ vehicles }) => {
-  let count =0;
+  let count = 0;
   const vehicleList = vehicles?.map((vehicle) => {
-    count++
-    
+    count++;
+
     const dateObject = new Date(vehicle?.registrationDate);
 
     const day = String(dateObject.getDate()).padStart(2, "0");
@@ -27,6 +26,7 @@ const Table = ({ vehicles }) => {
         <div className={styles.tabular}>{vehicle?.name}</div>
         <div className={styles.tabular}>{vehicle?.mobile}</div>
         <div className={styles.tabular}>{vehicle?.vehicleNumber}</div>
+        <div className={styles.tabular}>{vehicle?.receiptNumber}</div>
         <div className={`${styles.tabular} ${styles.date}`}>{localDate}</div>
         <div className={`${styles.tabular} ${styles.date}`}>{localTime}</div>
       </div>
@@ -40,6 +40,7 @@ const Table = ({ vehicles }) => {
           <div className={styles.tabular}>Name</div>
           <div className={styles.tabular}>Mobile</div>
           <div className={styles.tabular}> Vehicle</div>
+          <div className={styles.tabular}>Receipt No</div>
           <div className={`${styles.tabular} ${styles.date}`}>Date</div>
           <div className={`${styles.tabular} ${styles.date}`}>Time</div>
         </div>

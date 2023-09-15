@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Formik } from "formik";
 import * as Yup from "yup";
 import { addVehicleApi } from "../api/vehicles";
 import nayara from "../assets/images/nayara.jpg";
 import styles from "../assets/css/modules/Registration.module.css";
 import { Spinner } from "react-bootstrap";
+import { useParams } from "react-router-dom";
 
 import "./styles/css/main.css";
 import "./styles/css/util.css";
@@ -17,14 +18,19 @@ const validationSchema = Yup.object({
     .matches(/^\d{10}$/, "Enter Valid mobile number")
     .required("Mobile number is required"),
   vehicleNumber: Yup.string().required("Vehicle number is required"),
+  receiptNumber: Yup.string().required("Receipt number is required"),
 });
 
 const Registration = () => {
+  const { agentId, agentName } = useParams();
   const [isLoad, setIsLoad] = useState(false);
   const initialValues = {
     name: "",
     mobile: "",
     vehicleNumber: "",
+    receiptNumber: "",
+    agentId:agentId,
+    agentName:agentName
   };
 
   const handleSubmit = async (values, { resetForm }) => {
@@ -142,6 +148,28 @@ const Registration = () => {
                 {touched.vehicleNumber && errors.vehicleNumber && (
                   <div className="errormessage">
                     <p>{errors.vehicleNumber}</p>
+                  </div>
+                )}
+
+                <div className="wrap-input100 validate-input">
+                  <input
+                    className="input100"
+                    type="text"
+                    onChange={handleChange}
+                    placeholder="Receipt Number"
+                    onBlur={handleBlur}
+                    id="receiptNumber"
+                    name="receiptNumber"
+                    value={values.receiptNumber}
+                  />
+                  <span className="focus-input100"></span>
+                  <span className="symbol-input100">
+                    <i className="fa fa-file" aria-hidden="true"></i>
+                  </span>
+                </div>
+                {touched.receiptNumber && errors.receiptNumber && (
+                  <div className="errormessage">
+                    <p>{errors.receiptNumber}</p>
                   </div>
                 )}
 
