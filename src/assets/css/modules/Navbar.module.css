@@ -43,6 +43,30 @@
     padding-right: 20px;
   }
 
+  .navleft{
+    display: flex;
+    gap: 10px;
+  }
+
+  .download{
+    background-color: #2e4e8f;
+    color: white;
+    width: 100px;
+    height: 40px;
+    font-size: 1.3rem;
+    border-radius: 4px;
+  }
+
+  .download:hover{
+    background-color: #4a6190;
+    border: 1px solid white;
+
+  }
+
+  .downloadicon{
+    color: white;
+  }
+
   .nayara{
     width: 150px;
   }

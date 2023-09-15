@@ -12,6 +12,7 @@ import Navbar from "./components/Navbar";
 import CouponGenerator from "./components/CouponGenerator";
 import Error from "./components/Error";
 import { ToastContainer } from "react-toastify";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 function App() {
   return (
@@ -21,7 +22,14 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Navbar />}>
-            <Route index element={<Dashboard />} />
+            <Route
+              index
+              element={
+                <ProtectedRoute>
+                  <Dashboard />
+                </ProtectedRoute>
+              }
+            />
           </Route>
           <Route
             path="register/:agentName/:agentId"

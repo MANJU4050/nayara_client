@@ -1,53 +1,65 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { QRCodeSVG } from "qrcode.react";
 import one from "../assets/images/oneblack.png";
-
+import { getAgents } from "../api/agents/index";
 function QRCodeGenerator() {
-  const [inputText, setInputText] = useState("");
+  const [agents, setAgents] = useState([]);
+  const [inputText, setInputText] = useState(
+    "https://nayaraprizecontest.netlify.app/register"
+  );
 
-  const handleInputChange = (e) => {
-    setInputText(e.target.value);
-  };
+  useEffect(() => {
+    const getVehiclesApi = async () => {
+      try {
+        await getAgents().then((res) => {
+          console.log(res.data);
+          setAgents(res.data);
+        });
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    getVehiclesApi();
+  }, []);
 
   return (
     <div>
       <h1>QR Code Generator</h1>
-      <input
-      style={{width:"600px"}}
-        type="text"
-        placeholder="Enter text"
-        value={inputText}
-        onChange={handleInputChange}
-      />
+
       <div
         style={{
-          height: "700px",
           display: "flex",
+          flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
           backgroundColor: "white",
+          margin: "20px",
+          padding: "50px",
+          gap:"50px"
         }}
       >
-        {inputText && (
-          <QRCodeSVG
-            value={inputText}
-            size={384}
-            fgColor={"#000000"}
-            bgColor={"#ffffff"}
-            level={"L"}
-            includeMargin={false}
-            imageSettings={{
-              src: one,
-              x: undefined,
-              y: undefined,
-              height: 72,
-              width: 72,
-              excavate: true,
-            }}
-          />
-        )}
+        {agents?.map((agent)=>{
+          return <QRCodeSVG
+          value={`${inputText}/${agent?.name}/${agent?._id}`}
+          size={384}
+          fgColor={"#000000"}
+          bgColor={"#ffffff"}
+          level={"L"}
+          includeMargin={false}
+          imageSettings={{
+            src: one,
+            x: undefined,
+            y: undefined,
+            height: 72,
+            width: 72,
+            excavate: true,
+          }}
+        />
+        })
+          
+        }
       </div>
-      <img src={one} alt="one" />
     </div>
   );
 }
