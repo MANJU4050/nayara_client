@@ -1,0 +1,252 @@
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+  }
+
+  .heading {
+    width: 350px;
+    height: 60px;
+    background-color: black;
+    color: white;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 2rem;
+  }
+
+  .add {
+    width: 350px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .addinput {
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: rgb(65, 65, 65);
+    font-size: 1.5rem;
+    border: 1px solid rgb(25, 25, 25);
+    color: white;
+  }
+
+  .addbutton {
+    background-color: rgb(43, 90, 209);
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    color: white;
+  }
+
+  .addbutton:hover {
+    background-color: rgb(20, 71, 198);
+    border: 1px solid white;
+  }
+
+  .error {
+    color: red;
+    display: flex;
+    justify-content: center;
+  }
+
+  .detailcontainer {
+    width: 350px;
+    min-height: 600px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    gap: 40px;
+  }
+
+  .card {
+    width: 155px;
+    height: 200px;
+    background-color: black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .count {
+    color: rgb(209, 209, 209);
+    flex-grow: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    width: 100%;
+    background-color: rgb(21, 21, 21);
+    border-radius: 10px;
+    color: green;
+  }
+
+  
+  .name {
+    color: rgb(209, 209, 209);
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(21, 21, 21);
+    border-radius: 10px;
+    font-size: 1rem;
+  }
+
+  .name:hover {
+    cursor: pointer;
+    color: black;
+    background-color: white;
+  }
+
+  .card:hover {
+    color: green;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-left: 300px;
+  }
+
+  .heading {
+    width: 1400px;
+    height: 60px;
+    background-color: black;
+    color: white;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 2rem;
+  }
+
+  .add {
+    width: 1400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .addinput {
+    width: 1150px;
+    height: 60px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: rgb(65, 65, 65);
+    font-size: 1.5rem;
+    border: 1px solid rgb(25, 25, 25);
+    color: white;
+  }
+
+  .addbutton {
+    background-color: rgb(43, 90, 209);
+    width: 180px;
+    height: 60px;
+    border-radius: 10px;
+    color: white;
+  }
+
+  .addbutton:hover {
+    background-color: rgb(20, 71, 198);
+    border: 1px solid white;
+  }
+
+  .error {
+    color: red;
+    display: flex;
+    justify-content: center;
+  }
+
+  .detailcontainer {
+    width: 1400px;
+    min-height: 600px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    gap: 40px;
+  }
+
+  .card {
+    width: 248px;
+    height: 300px;
+    background-color: black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .count {
+    color: rgb(209, 209, 209);
+    flex-grow: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8rem;
+    width: 100%;
+    background-color: rgb(21, 21, 21);
+    border-radius: 10px;
+  }
+
+  .count:hover {
+    color: green;
+  }
+
+  .name {
+    color: rgb(209, 209, 209);
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(21, 21, 21);
+    border-radius: 10px;
+    font-size: 2rem;
+  }
+
+  .name:hover {
+    cursor: pointer;
+    color: black;
+    background-color: white;
+  }
+
+  .card:hover {
+    color: green;
+  }
+}

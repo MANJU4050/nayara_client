@@ -1,18 +1,16 @@
-import SharedComponent from "./components/SharedComponent";
-import AddCandidate from "./components/AddCandidate";
-import PickWinner from "./components/PickWinner";
-import Winners from "./components/Winners";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./components/Home";
-import Registration from "./components/Registration";
+import { ToastContainer } from "react-toastify";
+
 import Login from "./components/Login";
 import Dashboard from "./components/Dashboard";
-import QrCodeGenerator from "./components/QrCodeGenerator";
 import Navbar from "./components/Navbar";
-import CouponGenerator from "./components/CouponGenerator";
 import Error from "./components/Error";
-import { ToastContainer } from "react-toastify";
 import ProtectedRoute from "./components/ProtectedRoute";
+import Agent from "./components/Agent";
+import Vehicles from "./components/Vehicles";
+import QrCode from "./components/QrCode";
+import RegisterVehicle from "./components/RegisterVehicle";
+import RegisterSuccess from "./components/RegisterSuccess";
 
 function App() {
   return (
@@ -30,15 +28,39 @@ function App() {
                 </ProtectedRoute>
               }
             />
+            <Route
+              path="vehicles"
+              element={
+                <ProtectedRoute>
+                  <Vehicles />
+                </ProtectedRoute>
+              }
+            />
+
+            <Route
+              path="agents"
+              element={
+                <ProtectedRoute>
+                  <Agent />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="qr"
+              element={
+                <ProtectedRoute>
+                  <QrCode />
+                </ProtectedRoute>
+              }
+            />
           </Route>
-          <Route
-            path="register/:agentName/:agentId"
-            element={<Registration />}
-          />
           <Route path="login" element={<Login />} />
-          <Route path="qr" element={<QrCodeGenerator />} />
-          <Route path="coupon" element={<CouponGenerator />} />
-          <Route path="*" element={<Error />} />{" "}
+          <Route path="*" element={<Error />} />
+          <Route
+            path="/registration/:agentName/:number/:agentId"
+            element={<RegisterVehicle />}
+          />
+          <Route path="/success" element={<RegisterSuccess />} />
         </Routes>
       </Router>
     </>

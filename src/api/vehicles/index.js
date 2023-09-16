@@ -9,3 +9,8 @@ export const getVehicles = async()=>{
     const response = await API.get("/api/users/vehicles");
     return response;
 }
+
+export const deleteVehicle = async(id)=>{
+  const response = await API.delete(`/api/users/vehicles/${id}`)
+  return response;
+}

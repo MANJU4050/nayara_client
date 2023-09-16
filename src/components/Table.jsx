@@ -1,9 +1,13 @@
 import React from "react";
 import styles from "../assets/css/modules/Table.module.css";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Table = ({ vehicles }) => {
+const Table = ({ vehicles,deleteVehicleWithId }) => {
+
+  
   let count = 0;
-  const vehicleList = vehicles?.map((vehicle) => {
+  const vehicleList = vehicles && vehicles?.map((vehicle) => {
     count++;
 
     const dateObject = new Date(vehicle?.registrationDate);
@@ -26,9 +30,14 @@ const Table = ({ vehicles }) => {
         <div className={styles.tabular}>{vehicle?.name}</div>
         <div className={styles.tabular}>{vehicle?.mobile}</div>
         <div className={styles.tabular}>{vehicle?.vehicleNumber}</div>
-        <div className={styles.tabular}>{vehicle?.receiptNumber}</div>
+        <div className={`${styles.tabular} ${styles.date}`}>{vehicle?.receiptNumber}</div>
         <div className={`${styles.tabular} ${styles.date}`}>{localDate}</div>
         <div className={`${styles.tabular} ${styles.date}`}>{localTime}</div>
+        <div onClick={()=>{
+          deleteVehicleWithId(vehicle?._id)
+        }} className={`${styles.tabular} `}><div className={styles.delete}><FontAwesomeIcon  icon={faTrash}/></div></div>
+
+
       </div>
     );
   });
@@ -40,9 +49,11 @@ const Table = ({ vehicles }) => {
           <div className={styles.tabular}>Name</div>
           <div className={styles.tabular}>Mobile</div>
           <div className={styles.tabular}> Vehicle</div>
-          <div className={styles.tabular}>Receipt No</div>
+          <div className={`${styles.tabular} ${styles.date}`}>Receipt No</div>
           <div className={`${styles.tabular} ${styles.date}`}>Date</div>
           <div className={`${styles.tabular} ${styles.date}`}>Time</div>
+          <div className={`${styles.tabular}`}>Delete</div>
+
         </div>
         <div className={styles.body}>{vehicleList}</div>
       </div>

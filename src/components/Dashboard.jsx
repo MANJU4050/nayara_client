@@ -2,15 +2,17 @@ import React, { useEffect, useState } from "react";
 import Table from "./Table";
 import styles from "../assets/css/modules/Dashboard.module.css";
 import { getVehicles } from "../api/vehicles";
-import Bottom from "./Bottom";
 import { Spinner } from "react-bootstrap";
 import jsPDF from "jspdf";
+import { deleteVehicle } from "../api/vehicles";
+import { toast } from "react-toastify";
 
 const Dashboard = () => {
   const [vehicles, setVehicles] = useState([]);
   const [today, setToday] = useState("");
   const [total, setTotal] = useState("");
   const [isLoad, setIsLoad] = useState(false);
+  const [reFetch,setReFetch] = useState(false)
 
   useEffect(() => {
     const getAllVehicles = async () => {
@@ -34,7 +36,19 @@ const Dashboard = () => {
     };
 
     getAllVehicles();
-  }, []);
+  }, [reFetch]);
+
+  const deleteVehicleWithId = async(id)=>{
+    try{
+      
+      await deleteVehicle(id).then((res)=>{
+        toast.success("successfully deleted vehicle");
+        setReFetch(!reFetch)
+      })
+    }catch(error){
+      toast.error(error.response.data.error)
+    }
+  }
 
   const vehiclesPerPage = 8; // Set the number of vehicles per page
   const totalPages = Math.ceil(vehicles.length / vehiclesPerPage);
@@ -92,8 +106,7 @@ const Dashboard = () => {
               <div className={styles.detailslabel}>Total</div>
             </div>
           </div>
-          <Table vehicles={vehicles} />
-          <Bottom />
+          <Table deleteVehicleWithId={deleteVehicleWithId} vehicles={vehicles} />
         </>
       )}
     </>
