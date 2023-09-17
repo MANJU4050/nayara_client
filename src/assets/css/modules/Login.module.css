@@ -1,6 +1,5 @@
-
-@media screen and (max-width: 768px) {
-  .container{
+@media screen and (max-width: 767px) {
+  .container {
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -8,15 +7,26 @@
     align-items: center;
     gap: 10px;
     padding: 1rem;
-    background: rgb(6,7,8);
-background: -moz-linear-gradient(360deg, rgba(6,7,8,1) 0%, rgba(136,136,136,1) 100%);
-background: -webkit-linear-gradient(360deg, rgba(6,7,8,1) 0%, rgba(136,136,136,1) 100%);
-background: linear-gradient(360deg, rgba(6,7,8,1) 0%, rgba(136,136,136,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#060708",endColorstr="#888888",GradientType=1);
-
+    background: rgb(6, 7, 8);
+    background: -moz-linear-gradient(
+      360deg,
+      rgba(6, 7, 8, 1) 0%,
+      rgba(136, 136, 136, 1) 100%
+    );
+    background: -webkit-linear-gradient(
+      360deg,
+      rgba(6, 7, 8, 1) 0%,
+      rgba(136, 136, 136, 1) 100%
+    );
+    background: linear-gradient(
+      360deg,
+      rgba(6, 7, 8, 1) 0%,
+      rgba(136, 136, 136, 1) 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#060708",endColorstr="#888888",GradientType=1);
   }
 
-  .header{
+  .header {
     font-size: 1.6rem;
     font-weight: bold;
     text-align: center;
@@ -24,11 +34,10 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#060708",endCo
     color: rgb(0, 0, 0);
     color: #5b5c5c;
     font-size: 3rem;
-    
   }
 
-  .formcontainer{
-  width: 100%;
+  .formcontainer {
+    width: 100%;
     background-color: #464646;
     padding: 1rem;
     border-radius: 0.5rem;
@@ -38,7 +47,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#060708",endCo
     align-items: center;
   }
 
-  .form{
+  .form {
     width: 100%;
   }
   .forminsidecontainer {
@@ -50,7 +59,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#060708",endCo
     gap: 10px;
   }
 
-  .nayara{
+  .nayara {
     width: 200px;
   }
 
@@ -60,7 +69,6 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#060708",endCo
     justify-content: center;
     align-items: center;
     gap: 20px;
-    
   }
 
   .input {
@@ -70,7 +78,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#060708",endCo
     font-size: 1rem;
     height: 50px;
     border: none;
-    border-radius: 1.2rem ;
+    border-radius: 1.2rem;
     text-align: center;
   }
 
@@ -95,22 +103,19 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#060708",endCo
     font-size: 1.5rem;
   }
 
-  .button:hover{
-    background-color: #3396ff;;
+  .button:hover {
+    background-color: #3396ff;
   }
 
   .error {
     height: 1.5rem;
     font-size: 1rem;
-    color:rgb(255, 0, 0);
-    
+    color: rgb(255, 0, 0);
   }
-
 }
 
-@media screen and (max-width:1366px) and (max-height:768px){ 
-
-  .container{
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .container {
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -118,14 +123,26 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#060708",endCo
     align-items: center;
     gap: 10px;
 
-    background: rgb(6,7,8);
-background: -moz-linear-gradient(360deg, rgba(6,7,8,1) 0%, rgba(136,136,136,1) 100%);
-background: -webkit-linear-gradient(360deg, rgba(6,7,8,1) 0%, rgba(136,136,136,1) 100%);
-background: linear-gradient(360deg, rgba(6,7,8,1) 0%, rgba(136,136,136,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#060708",endColorstr="#888888",GradientType=1);
+    background: rgb(6, 7, 8);
+    background: -moz-linear-gradient(
+      360deg,
+      rgba(6, 7, 8, 1) 0%,
+      rgba(136, 136, 136, 1) 100%
+    );
+    background: -webkit-linear-gradient(
+      360deg,
+      rgba(6, 7, 8, 1) 0%,
+      rgba(136, 136, 136, 1) 100%
+    );
+    background: linear-gradient(
+      360deg,
+      rgba(6, 7, 8, 1) 0%,
+      rgba(136, 136, 136, 1) 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#060708",endColorstr="#888888",GradientType=1);
   }
 
-  .header{
+  .header {
     font-size: 1.6rem;
     font-weight: bold;
     text-align: center;
@@ -133,10 +150,9 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#060708",endCo
     color: rgb(0, 0, 0);
     color: #5b5c5c;
     font-size: 3rem;
-    
   }
 
-  .formcontainer{
+  .formcontainer {
     width: 60%;
     background-color: #464646;
     padding: 1rem;
@@ -147,7 +163,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#060708",endCo
     align-items: center;
   }
 
-  .form{
+  .form {
     width: 100%;
   }
   .forminsidecontainer {
@@ -159,7 +175,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#060708",endCo
     gap: 10px;
   }
 
-  .nayara{
+  .nayara {
     width: 200px;
   }
 
@@ -169,7 +185,6 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#060708",endCo
     justify-content: center;
     align-items: center;
     gap: 20px;
-    
   }
 
   .input {
@@ -179,7 +194,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#060708",endCo
     font-size: 1rem;
     height: 50px;
     border: none;
-    border-radius: 1.2rem ;
+    border-radius: 1.2rem;
     text-align: center;
   }
 
@@ -204,69 +219,129 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#060708",endCo
     font-size: 1.5rem;
   }
 
-  .button:hover{
-    background-color: #3396ff;;
+  .button:hover {
+    background-color: #3396ff;
   }
 
   .error {
     height: 1.5rem;
     font-size: 1rem;
-    color:red
+    color: red;
   }
-
-  
 }
 
-/* @media screen and (min-width: 768px) {
-  .maincontainer {
-    margin-top: 130px;
-    margin-left: 450px;
-    width: 1000px;
-    height: 600px;
-    background-color: #27272a;
+@media screen and (min-width: 1024px) {
+  .container {
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    gap: 40px;
-    border-radius: 10px;
+    align-items: center;
+    gap: 10px;
+
+    background: rgb(6, 7, 8);
+    background: -moz-linear-gradient(
+      360deg,
+      rgba(6, 7, 8, 1) 0%,
+      rgba(136, 136, 136, 1) 100%
+    );
+    background: -webkit-linear-gradient(
+      360deg,
+      rgba(6, 7, 8, 1) 0%,
+      rgba(136, 136, 136, 1) 100%
+    );
+    background: linear-gradient(
+      360deg,
+      rgba(6, 7, 8, 1) 0%,
+      rgba(136, 136, 136, 1) 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#060708",endColorstr="#888888",GradientType=1);
   }
 
-  .loginheading h1 {
+  .header {
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: rgb(0, 0, 0);
     color: #5b5c5c;
     font-size: 3rem;
   }
 
-  .loginbutton {
-    width: 200px;
-    height: 45px;
-    font-size: 1.7rem;
-    border-radius: 4px;
-    background-color: #a3a3a3;
-    color: black;
-    border: 1px solid black;
-    font-weight: bold;
+  .formcontainer {
+    width: 60%;
+    background-color: #464646;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  .loginbutton:hover {
-    border: 1px solid whitesmoke;
-    color: white;
-    background-color: #090a0c;
+  .form {
+    width: 100%;
   }
-
-  .logininput {
-    width: 300px;
-    height: 50px;
-    border-radius: 5px;
-    text-align: center;
-  }
-
-  .logininput::placeholder {
-    text-align: center;
-    font-size: 1rem;
+  .forminsidecontainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
   }
 
   .nayara {
     width: 200px;
   }
-} */
+
+  .inputcontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .input {
+    background-color: #e6e6e6;
+    padding: 0.5rem;
+    border: none;
+    font-size: 1rem;
+    height: 50px;
+    border: none;
+    border-radius: 1.2rem;
+    text-align: center;
+  }
+
+  .input::placeholder {
+    font-size: 1.1rem;
+  }
+
+  .icon {
+    color: #666666;
+    height: 20px;
+  }
+
+  .button {
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    border: none;
+    border-radius: 0.25rem;
+    color: white;
+    width: 150px;
+    height: 60px;
+    margin-top: 20px;
+    font-size: 1.5rem;
+  }
+
+  .button:hover {
+    background-color: #3396ff;
+  }
+
+  .error {
+    height: 1.5rem;
+    font-size: 1rem;
+    color: red;
+  }
+}

@@ -21,11 +21,11 @@ const Navbar = () => {
   const location = useLocation();
   const [activeLink, setActiveLink] = useState(location?.pathname);
   const [toggle, setToggle] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768); // Adjust the threshold as needed
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768); // Adjust the threshold as needed
+      setIsMobile(window.innerWidth <= 768);
     };
 
     window.addEventListener("resize", handleResize);
@@ -85,6 +85,7 @@ const Navbar = () => {
     // Save or download the single PDF file with multiple pages
     doc.save("vehicles.pdf");
   };
+
   const downloadPdf = async () => {
     await getVehicles().then((res) => {
       generatePDF(res.data?.vehicles);
@@ -160,10 +161,13 @@ const Navbar = () => {
           <FontAwesomeIcon className={styles.sidebaricon} icon={faCar} />
           Vehicles
         </div>
-        <div onClick={() => {
-          navigate("/qr");
-          setToggle(!toggle);
-        }} className={styles.sidemenu}>
+        <div
+          onClick={() => {
+            navigate("/qr");
+            setToggle(!toggle);
+          }}
+          className={styles.sidemenu}
+        >
           <FontAwesomeIcon className={styles.sidebaricon} icon={faHome} />
           Register
         </div>
