@@ -3,7 +3,7 @@
 
 
 
-@media  screen and (max-width:768px) {
+@media  screen and (max-width:767px) {
 
     .detailcontainer {
         width: 100%;
@@ -41,8 +41,114 @@
     
 }
 
-@media screen and (min-width:768px){
+@media screen and (min-width:768px) and (max-width:1023px){
 
+    .download:hover{
+        cursor: pointer;
+        background-color: white;
+        color: black;
+        border-radius: 3px;
+        width: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .detailcontainer {
+        width: 100%;
+        padding: 10px;
+        padding-top: 10px;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        border-radius: 10px;
+        
+        
+    }
+
+    .detailscontainer{
+        width: 600px;
+        height: 150px;
+        background-color: #0e0f11;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        color: white;
+        border-radius: 5px;
+
+    }
+
+    .detailsvalue{
+        font-size: 3rem;
+    }
+
+    .detailslabel{
+        color: #89898b;
+        font-weight: bold;
+    }
+    
+}
+
+@media screen and (min-width:1024px) and (max-width:1439px) {
+    .download:hover{
+        cursor: pointer;
+        background-color: white;
+        color: black;
+        border-radius: 3px;
+        width: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2.5rem;
+        padding-left: 16rem;
+        gap: 10px;
+    }
+    .detailcontainer {
+        width: 100%;
+        padding-top: 10px;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        border-radius: 10px;
+        
+        
+    }
+
+    .detailscontainer{
+        width: 100%;
+        height: 150px;
+        background-color: #0e0f11;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        color: white;
+        border-radius: 5px;
+
+    }
+
+    .detailsvalue{
+        font-size: 3rem;
+    }
+
+    .detailslabel{
+        color: #89898b;
+        font-weight: bold;
+    }
+    
+}
+
+@media screen and (min-width:1440px){
     .download:hover{
         cursor: pointer;
         background-color: white;

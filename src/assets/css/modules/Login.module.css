@@ -313,6 +313,13 @@
     border-radius: 1.2rem;
     text-align: center;
     min-width: 300px;
+    border: none;
+    
+  }
+
+  .input:focus{
+    outline: none;
+    border: none;
   }
 
   .input::placeholder {

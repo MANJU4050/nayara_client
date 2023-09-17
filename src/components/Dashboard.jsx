@@ -94,7 +94,7 @@ const Dashboard = () => {
           <Spinner animation="border" role="status"></Spinner>
         </div>
       ) : (
-        <>
+        <div className={styles.container}>
           {" "}
           <div className={styles.detailcontainer}>
             <div className={styles.detailscontainer}>
@@ -107,7 +107,7 @@ const Dashboard = () => {
             </div>
           </div>
           <Table deleteVehicleWithId={deleteVehicleWithId} vehicles={vehicles} />
-        </>
+        </div>
       )}
     </>
   );

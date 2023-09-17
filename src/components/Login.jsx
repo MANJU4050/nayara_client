@@ -68,6 +68,7 @@ const Login = () => {
                       onChange={handleChange}
                       onBlur={handleBlur}
                       value={values.email}
+                      autoComplete="off"
                     />
                     {touched.email && errors.email && (
                       <div className={styles.error}>{errors.email}</div>
@@ -81,6 +82,7 @@ const Login = () => {
                       onChange={handleChange}
                       onBlur={handleBlur}
                       value={values.password}
+                      autoComplete="off"
                     />
 
                     {touched.password && errors.password && (

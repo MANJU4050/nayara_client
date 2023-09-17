@@ -83,7 +83,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width:1023px) {
   .container {
     width: 100%;
     height: 80px;
@@ -196,4 +196,240 @@
     background-color: #1e2127;
     border: 1px solid;
   }
+}
+
+@media screen and (min-width:1024px) and (max-width:1439px){
+
+  .container {
+    width: 100%;
+    height: 80px;
+    background-color: #28292b;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 20px;
+  }
+
+  .navleft {
+    display: flex;
+    gap: 10px;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .sidebar {
+    width: 200px;
+    min-height: 500px;
+    background-color: black;
+    position: fixed;
+    top: 15%;
+    left: 2%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 1;
+  }
+
+  .sidemenu {
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+    align-items: center;
+    background-color: rgb(37, 38, 39);
+    color: white;
+  }
+
+  .sidemenu:hover {
+    cursor: pointer;
+    background-color: rgb(98, 100, 103);
+    background-color: #ced3d3;
+    color: black;
+  }
+
+  .sidebaricon {
+  }
+
+  .activelink {
+    background-color: #ced3d3;
+    color: black;
+  }
+
+  .download {
+    background-color: #2e4e8f;
+    color: white;
+    width: 150px;
+    height: 40px;
+    font-size: 1.3rem;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    align-items: center;
+    padding: 5px;
+    border: none;
+  }
+
+  .downloadicon {
+    font-size: 1.5rem;
+  }
+
+  .download:hover {
+    background-color: #4a6190;
+    border: 1px solid white;
+  }
+
+  .downloadicon {
+    color: white;
+  }
+
+  .nayara {
+    width: 150px;
+  }
+
+  .navbarheading h1 {
+    color: #5b5c5c;
+    font-size: 2rem;
+  }
+
+  .logoutbutton {
+    background-color: #090a0c;
+    color: white;
+    width: 100px;
+    height: 40px;
+    font-size: 1.3rem;
+    border-radius: 4px;
+    border: none;
+  }
+
+  .logoutbutton:hover {
+    background-color: #1e2127;
+    border: 1px solid;
+  }
+  
+}
+
+@media screen and (min-width:1440px) {
+
+  .container {
+    width: 100%;
+    height: 80px;
+    background-color: #28292b;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 20px;
+  }
+
+  .navleft {
+    display: flex;
+    gap: 10px;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .sidebar {
+    width: 250px;
+    height: 600px;
+    background-color: black;
+    position: fixed;
+    top: 20%;
+    left: 2%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 1;
+  }
+
+  .sidemenu {
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+    align-items: center;
+    background-color: rgb(37, 38, 39);
+    color: white;
+  }
+
+  .sidemenu:hover {
+    cursor: pointer;
+    background-color: rgb(98, 100, 103);
+    background-color: #ced3d3;
+    color: black;
+  }
+
+  .sidebaricon {
+  }
+
+  .activelink {
+    background-color: #ced3d3;
+    color: black;
+  }
+
+  .download {
+    background-color: #2e4e8f;
+    color: white;
+    width: 150px;
+    height: 40px;
+    font-size: 1.3rem;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    align-items: center;
+    padding: 5px;
+  }
+
+  .downloadicon {
+    font-size: 1.5rem;
+  }
+
+  .download:hover {
+    background-color: #4a6190;
+    border: 1px solid white;
+  }
+
+  .downloadicon {
+    color: white;
+  }
+
+  .nayara {
+    width: 150px;
+  }
+
+  .navbarheading h1 {
+    color: #5b5c5c;
+    font-size: 2rem;
+  }
+
+  .logoutbutton {
+    background-color: #090a0c;
+    color: white;
+    width: 100px;
+    height: 40px;
+    font-size: 1.3rem;
+    border-radius: 4px;
+  }
+
+  .logoutbutton:hover {
+    background-color: #1e2127;
+    border: 1px solid;
+  }
+  
 }

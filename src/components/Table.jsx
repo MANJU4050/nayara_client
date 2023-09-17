@@ -42,8 +42,8 @@ const Table = ({ vehicles,deleteVehicleWithId }) => {
     );
   });
   return (
-    <>
-      <div className={styles.container}>
+    <div className={styles.container}>
+      <div className={styles.table}>
         <div className={styles.heading}>
           <div className={`${styles.tabular} ${styles.date}`}>SLno</div>
           <div className={styles.tabular}>Name</div>
@@ -57,7 +57,7 @@ const Table = ({ vehicles,deleteVehicleWithId }) => {
         </div>
         <div className={styles.body}>{vehicleList}</div>
       </div>
-    </>
+    </div>
   );
 };
 
