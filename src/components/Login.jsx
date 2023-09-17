@@ -17,6 +17,7 @@ const Login = () => {
         localStorage.setItem("token", res.data.token);
         toast.success("login successfull");
         navigate("/");
+        resetForm();
         setIsSubmit(false);
       });
     } catch (error) {

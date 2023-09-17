@@ -39,7 +39,7 @@ const Agent = () => {
 
   const handleSubmit = async (values) => {
     try {
-      values.number = values?.number.toString()
+      values.number = values?.number.toString();
       setIsSubmitting(true);
       await addAgent(values).then((res) => {
         toast.success("agent added succesfully");
@@ -79,22 +79,9 @@ const Agent = () => {
           <Spinner animation="border" role="status" variant="warning"></Spinner>
         </div>
       ) : (
-        <>
-          <div className={styles.heading}>AGENTS<div
-          style={{
-            color: "black",
-            width: "40px",
-            height: "40px",
-            backgroundColor: "white",
-            borderRadius: "4px",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            marginLeft:"5px"
-          }}
-        >
-          {initialValues?.number-1}
-        </div></div>
+        <div div className={styles.container}>
+        <div className={styles.heading}>AGENTS</div>
+
           <Formik
             onSubmit={handleSubmit}
             initialValues={initialValues}
@@ -108,10 +95,10 @@ const Agent = () => {
               touched,
               handleBlur,
             }) => (
-              <form onSubmit={handleSubmit}>
+              <form onSubmit={handleSubmit} className={styles.form}>
+
                 <div className={styles.addcontainer}>
                   <div className={styles.add}>
-                    
                     <input
                       className={styles.addinput}
                       type="text"
@@ -120,9 +107,10 @@ const Agent = () => {
                       value={values.name}
                       onChange={handleChange}
                       onBlur={handleBlur}
+                      autoComplete="off"
                     />
 
-                    <button className={styles.addbutton}>Register</button>
+                    <button className={styles.addbutton} disabled={isSubmiting}> {isSubmiting ? <Spinner /> : "Register"}</button>
                   </div>
                   {touched.name && errors.name && (
                     <div className={styles.error}>{errors?.name}</div>
@@ -133,7 +121,7 @@ const Agent = () => {
           </Formik>
 
           <div className={styles.detailcontainer}>{agentList}</div>
-        </>
+        </div>
       )}
     </div>
   );

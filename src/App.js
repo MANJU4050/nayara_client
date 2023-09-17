@@ -4,13 +4,13 @@ import { ToastContainer } from "react-toastify";
 import Login from "./components/Login";
 import Dashboard from "./components/Dashboard";
 import Navbar from "./components/Navbar";
-import Error from "./components/Error";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Agent from "./components/Agent";
 import Vehicles from "./components/Vehicles";
 import QrCode from "./components/QrCode";
 import RegisterVehicle from "./components/RegisterVehicle";
 import RegisterSuccess from "./components/RegisterSuccess";
+import PageNotFound from "./components/PageNotFound";
 
 function App() {
   return (
@@ -55,9 +55,9 @@ function App() {
             />
           </Route>
           <Route path="login" element={<Login />} />
-          <Route path="*" element={<Error />} />
+          <Route path="*" element={<PageNotFound />} />
           <Route
-            path="/registration/:agentName/:number/:agentId"
+            path="/register/:agentName/:number/:agentId"
             element={<RegisterVehicle />}
           />
           <Route path="/success" element={<RegisterSuccess />} />

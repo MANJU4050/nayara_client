@@ -1,197 +1,152 @@
+@media screen and (max-width: 767px) {
+  .detailcontainer {
+    width: 100%;
+    padding: 5px;
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 2px;
+    border-radius: 10px;
+  }
 
-  
+  .detailscontainer {
+    width: 100%;
+    height: 120px;
+    background-color: #0e0f11;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    border-radius: 5px;
+  }
 
+  .detailsvalue {
+    font-size: 3rem;
+  }
 
-
-@media  screen and (max-width:767px) {
-
-    .detailcontainer {
-        width: 100%;
-        padding: 5px;
-        padding-top: 10px;
-        display: flex;
-        justify-content: center;
-        gap: 2px;
-        border-radius: 10px;
-        
-        
-    }
-
-    .detailscontainer{
-        width: 100%;
-        height: 120px;
-        background-color: #0e0f11;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        color: white;
-        border-radius: 5px;
-
-    }
-
-    .detailsvalue{
-        font-size: 3rem;
-    }
-
-    .detailslabel{
-        color: #89898b;
-        font-weight: bold;
-    }
-    
+  .detailslabel {
+    color: #89898b;
+    font-weight: bold;
+  }
 }
 
-@media screen and (min-width:768px) and (max-width:1023px){
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .detailcontainer {
+    width: 100%;
+    padding: 5px;
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    border-radius: 10px;
+  }
 
-    .download:hover{
-        cursor: pointer;
-        background-color: white;
-        color: black;
-        border-radius: 3px;
-        width: 80px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+  .detailscontainer {
+    width: 100%;
+    height: 140px;
+    background-color: #0e0f11;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    border-radius: 5px;
+  }
 
-    }
-    .detailcontainer {
-        width: 100%;
-        padding: 10px;
-        padding-top: 10px;
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-        border-radius: 10px;
-        
-        
-    }
+  .detailsvalue {
+    font-size: 3rem;
+  }
 
-    .detailscontainer{
-        width: 600px;
-        height: 150px;
-        background-color: #0e0f11;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        color: white;
-        border-radius: 5px;
-
-    }
-
-    .detailsvalue{
-        font-size: 3rem;
-    }
-
-    .detailslabel{
-        color: #89898b;
-        font-weight: bold;
-    }
-    
+  .detailslabel {
+    color: #89898b;
+    font-weight: bold;
+  }
 }
 
-@media screen and (min-width:1024px) and (max-width:1439px) {
-    .download:hover{
-        cursor: pointer;
-        background-color: white;
-        color: black;
-        border-radius: 3px;
-        width: 80px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 16rem;
+    padding-top: 0.6rem;
+    padding-right: 2rem;
+    gap: 10px;
+  }
+  .detailcontainer {
+    width: 100%;
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 10px;
+  }
 
-    }
+  .detailscontainer {
+    width: 100%;
+    height: 150px;
+    background-color: #0e0f11;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    border-radius: 5px;
+  }
 
-    .container{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 2.5rem;
-        padding-left: 16rem;
-        gap: 10px;
-    }
-    .detailcontainer {
-        width: 100%;
-        padding-top: 10px;
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-        border-radius: 10px;
-        
-        
-    }
+  .detailsvalue {
+    font-size: 3rem;
+  }
 
-    .detailscontainer{
-        width: 100%;
-        height: 150px;
-        background-color: #0e0f11;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        color: white;
-        border-radius: 5px;
-
-    }
-
-    .detailsvalue{
-        font-size: 3rem;
-    }
-
-    .detailslabel{
-        color: #89898b;
-        font-weight: bold;
-    }
-    
+  .detailslabel {
+    color: #89898b;
+    font-weight: bold;
+  }
 }
 
-@media screen and (min-width:1440px){
-    .download:hover{
-        cursor: pointer;
-        background-color: white;
-        color: black;
-        border-radius: 3px;
-        width: 80px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+@media screen and (min-width: 1440px) {
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 24rem;
+    padding-top: 2.8rem;
+    padding-right: 4rem;
+    gap: 10px;
+    color: rgb(14, 22, 22);
+  }
+  .detailcontainer {
+    width: 100%;
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 10px;
+  }
 
-    }
-    .detailcontainer {
-        width: 100%;
-        padding: 10px;
-        padding-top: 10px;
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-        border-radius: 10px;
-        
-        
-    }
+  .detailscontainer {
+    width: 100%;
+    height: 150px;
+    background-color: #0e0f11;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    border-radius: 5px;
+  }
 
-    .detailscontainer{
-        width: 600px;
-        height: 150px;
-        background-color: #0e0f11;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        color: white;
-        border-radius: 5px;
+  .detailsvalue {
+    font-size: 3rem;
+  }
 
-    }
-
-    .detailsvalue{
-        font-size: 3rem;
-    }
-
-    .detailslabel{
-        color: #89898b;
-        font-weight: bold;
-    }
-    
+  .detailslabel {
+    color: #89898b;
+    font-weight: bold;
+  }
 }

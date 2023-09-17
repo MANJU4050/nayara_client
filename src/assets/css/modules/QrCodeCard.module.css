@@ -1,18 +1,16 @@
-@media screen and (max-width:768px) {
-
+@media screen and (max-width: 767px) {
   .card {
     display: flex;
-   gap: 10px;
-   background-color: white;
-   min-height: 250px;
-   justify-content: center;
-   align-items: center;
+    gap: 10px;
+    background-color: white;
+    min-height: 250px;
+    justify-content: center;
+    align-items: center;
   }
 
-  .qr{
+  .qr {
     width: 200px;
     height: 200px;
-   
   }
 
   .qrcontainer {
@@ -22,12 +20,9 @@
     align-items: center;
     justify-content: space-evenly;
     padding: 10px;
-   
   }
 
- 
-
-  .namewraper{
+  .namewraper {
     width: 200px;
     height: 40px;
     background-color: rgb(0, 0, 0);
@@ -39,44 +34,35 @@
   .agentname {
     width: 60px;
     color: white;
-    
   }
 
-
-  .agentname:hover{
+  .agentname:hover {
     cursor: pointer;
     background-color: rgb(56, 56, 146);
     justify-content: space-evenly;
-
   }
 
-  .download{
+  .download {
     width: 20px;
     left: 80%;
     position: absolute;
     color: blueviolet;
-
-
   }
-
-  
 }
 
-@media screen and (min-width: 768px) {
-
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   .card {
     display: flex;
-   gap: 5px;
-   background-color: white;
-   min-height: 250px;
-   justify-content: center;
-   align-items: center;
+    gap: 5px;
+    background-color: white;
+    min-height: 250px;
+    justify-content: center;
+    align-items: center;
   }
 
-  .qr{
+  .qr {
     width: 384px;
     height: 384px;
-   
   }
 
   .qrcontainer {
@@ -86,12 +72,9 @@
     align-items: center;
     justify-content: space-evenly;
     padding: 10px;
-   
   }
 
- 
-
-  .namewraper{
+  .namewraper {
     width: 384px;
     height: 60px;
     background-color: rgb(0, 0, 0);
@@ -102,7 +85,7 @@
     font-size: 2rem;
   }
 
-  .namewraper:hover{
+  .namewraper:hover {
     cursor: pointer;
     background-color: rgb(56, 56, 146);
     justify-content: space-evenly;
@@ -110,20 +93,118 @@
   .agentname {
     width: 60px;
     color: white;
-    
   }
 
-
-
-  .download{
+  .download {
     left: 88%;
     position: absolute;
     color: blueviolet;
-
-
   }
-  
+}
 
-  
-  
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  .card {
+    display: flex;
+    gap: 5px;
+    background-color: white;
+    min-height: 250px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+  }
+
+  .qr {
+    width: 280px;
+    height: 280px;
+  }
+
+  .qrcontainer {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .namewraper {
+    width: 280px;
+    height: 60px;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-size: 2rem;
+  }
+
+  .namewraper:hover {
+    cursor: pointer;
+    background-color: rgb(56, 56, 146);
+    justify-content: space-evenly;
+  }
+  .agentname {
+    color: white;
+  }
+
+  .download {
+    font-size: 1.5rem;
+    left: 85%;
+    position: absolute;
+    color: blueviolet;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .card {
+    display: flex;
+    gap: 5px;
+    background-color: white;
+    min-height: 250px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .qr {
+    width: 280px;
+    height: 280px;
+  }
+
+  .qrcontainer {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .namewraper {
+    width: 280px;
+    height: 60px;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-size: 2rem;
+  }
+
+  .namewraper:hover {
+    cursor: pointer;
+    background-color: rgb(56, 56, 146);
+    justify-content: space-evenly;
+  }
+  .agentname {
+    color: white;
+  }
+
+  .download {
+    font-size: 1.5rem;
+    left: 85%;
+    position: absolute;
+    color: blueviolet;
+  }
 }

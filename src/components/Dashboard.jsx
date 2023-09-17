@@ -12,7 +12,7 @@ const Dashboard = () => {
   const [today, setToday] = useState("");
   const [total, setTotal] = useState("");
   const [isLoad, setIsLoad] = useState(false);
-  const [reFetch,setReFetch] = useState(false)
+  const [reFetch, setReFetch] = useState(false);
 
   useEffect(() => {
     const getAllVehicles = async () => {
@@ -38,50 +38,15 @@ const Dashboard = () => {
     getAllVehicles();
   }, [reFetch]);
 
-  const deleteVehicleWithId = async(id)=>{
-    try{
-      
-      await deleteVehicle(id).then((res)=>{
+  const deleteVehicleWithId = async (id) => {
+    try {
+      await deleteVehicle(id).then((res) => {
         toast.success("successfully deleted vehicle");
-        setReFetch(!reFetch)
-      })
-    }catch(error){
-      toast.error(error.response.data.error)
+        setReFetch(!reFetch);
+      });
+    } catch (error) {
+      toast.error(error.response.data.error);
     }
-  }
-
-  const vehiclesPerPage = 8; // Set the number of vehicles per page
-  const totalPages = Math.ceil(vehicles.length / vehiclesPerPage);
-
-  const generatePDF = () => {
-    const doc = new jsPDF("p", "mm", "a4"); // Create a new A4-sized PDF
-
-    for (let page = 0; page < totalPages; page++) {
-      if (page > 0) {
-        doc.addPage(); // Add a new page for each set of vehicles
-      }
-
-      for (
-        let i = page * vehiclesPerPage;
-        i < (page + 1) * vehiclesPerPage && i < vehicles.length;
-        i++
-      ) {
-        const vehicle = vehicles[i];
-        const x = 10 + ((i - page * vehiclesPerPage) % 2) * 105; // Alternate between left and right columns
-        const y = 15 + Math.floor((i - page * vehiclesPerPage) / 2) * 60; // Adjust the vertical position
-
-        const width = 90; // Box width
-        const height = 50; // Box height
-
-        doc.rect(x, y, width, height);
-        doc.text(`Name: ${vehicle.name}`, x + 5, y + 10);
-        doc.text(`Mobile: ${vehicle.mobile}`, x + 5, y + 20);
-        doc.text(`Vehicle: ${vehicle.vehicleNumber}`, x + 5, y + 30);
-        doc.text(`Receipt: ${vehicle.receiptNumber}`, x + 5, y + 40);
-      }
-    }
-
-    doc.save("vehicles.pdf"); // Save or download the single PDF file with multiple pages
   };
 
   return (
@@ -95,18 +60,20 @@ const Dashboard = () => {
         </div>
       ) : (
         <div className={styles.container}>
-          {" "}
           <div className={styles.detailcontainer}>
             <div className={styles.detailscontainer}>
               <div className={styles.detailsvalue}>{today}</div>
               <div className={styles.detailslabel}>Today</div>
             </div>
             <div className={styles.detailscontainer}>
-              <div onClick={generatePDF} className={`${styles.detailsvalue} ${styles.download}`}>{total}</div>
+              <div className={styles.detailsvalue}>{total}</div>
               <div className={styles.detailslabel}>Total</div>
             </div>
           </div>
-          <Table deleteVehicleWithId={deleteVehicleWithId} vehicles={vehicles} />
+          <Table
+            deleteVehicleWithId={deleteVehicleWithId}
+            vehicles={vehicles}
+          />
         </div>
       )}
     </>

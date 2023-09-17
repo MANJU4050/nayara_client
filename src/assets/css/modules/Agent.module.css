@@ -1,17 +1,17 @@
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .container {
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 5px;
     justify-content: center;
     align-items: center;
-    padding-top: 20px;
+    padding: 0.1rem;
+    gap: 0.2rem;
   }
 
   .heading {
-    width: 350px;
-    height: 60px;
+    width: 100%;
+    height: 50px;
     background-color: black;
     color: white;
     border-radius: 8px;
@@ -23,32 +23,37 @@
   }
 
   .add {
-    width: 350px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(0, 0, 0);
-    padding: 20px;
     border-radius: 10px;
+    padding: .1rem;
+    gap: 0.3rem;
+
+
+  }
+
+  .form{
+    width: 100%;
   }
 
   .addinput {
-    width: 200px;
+    width: 100%;
     height: 50px;
     text-align: center;
     border-radius: 10px;
     background-color: rgb(65, 65, 65);
-    font-size: 1.5rem;
     border: 1px solid rgb(25, 25, 25);
     color: white;
   }
 
   .addbutton {
     background-color: rgb(43, 90, 209);
-    width: 100px;
     height: 50px;
     border-radius: 10px;
     color: white;
+    border: none;
   }
 
   .addbutton:hover {
@@ -63,18 +68,18 @@
   }
 
   .detailcontainer {
-    width: 350px;
+    width: 100%;
     min-height: 600px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
-    margin-top: 20px;
-    gap: 40px;
+    gap: 1rem;
+    padding: 1rem;
   }
 
   .card {
-    width: 155px;
+    width: 160px;
     height: 200px;
     background-color: black;
     border-radius: 10px;
@@ -83,7 +88,7 @@
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    padding: 10px;
+    padding: 0.5rem;
   }
 
   .count {
@@ -92,14 +97,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 4rem;
+    font-size: 3rem;
     width: 100%;
     background-color: rgb(21, 21, 21);
     border-radius: 10px;
     color: green;
   }
 
-  
   .name {
     color: rgb(209, 209, 209);
     flex-grow: 1;
@@ -110,6 +114,7 @@
     background-color: rgb(21, 21, 21);
     border-radius: 10px;
     font-size: 1rem;
+    font-weight: 600;
   }
 
   .name:hover {
@@ -123,20 +128,19 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   .container {
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 5px;
     justify-content: center;
     align-items: center;
-    padding-top: 20px;
-    padding-left: 300px;
+    padding: 0.1rem;
+    gap: 0.8rem;
   }
 
   .heading {
-    width: 1400px;
+    width: 100%;
     height: 60px;
     background-color: black;
     color: white;
@@ -149,32 +153,40 @@
   }
 
   .add {
-    width: 1400px;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    background-color: rgb(0, 0, 0);
-    padding: 20px;
     border-radius: 10px;
+    padding: .1rem;
+    gap: 2rem;
+
+
+  }
+
+  .form{
+    width: 100%;
   }
 
   .addinput {
-    width: 1150px;
+    width: 100%;
     height: 60px;
     text-align: center;
     border-radius: 10px;
     background-color: rgb(65, 65, 65);
-    font-size: 1.5rem;
     border: 1px solid rgb(25, 25, 25);
     color: white;
+    font-size: 1.3rem;
   }
 
   .addbutton {
+    min-width: 180px;
     background-color: rgb(43, 90, 209);
-    width: 180px;
     height: 60px;
     border-radius: 10px;
     color: white;
+    border: none;
+    font-size: 1.3rem;
   }
 
   .addbutton:hover {
@@ -189,18 +201,153 @@
   }
 
   .detailcontainer {
-    width: 1400px;
+    width: 100%;
     min-height: 600px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .card {
+    width: 240px;
+    height: 300px;
+    background-color: black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 0.5rem;
+  }
+
+  .count {
+    color: rgb(209, 209, 209);
+    flex-grow: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    width: 100%;
+    background-color: rgb(21, 21, 21);
+    border-radius: 10px;
+    color: green;
+  }
+
+  .name {
+    color: rgb(209, 209, 209);
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(21, 21, 21);
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .name:hover {
+    cursor: pointer;
+    color: black;
+    background-color: white;
+  }
+
+  .card:hover {
+    color: green;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 1.2rem;
+    padding-left: 8rem;
+    padding-right: 2rem;
+  }
+
+  .heading {
+    width: 100%;
+    background-color: black;
+    color: white;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 2rem;
+  }
+
+  .addcontainer {
+    width: 100%;
+  }
+  .add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px;
+    border-radius: 1rem;
+    gap: 2rem;
+    background-color: black;
+  }
+
+  .form {
+    width: 100%;
+  }
+
+  .addinput {
+    text-align: center;
+    border-radius: 10px;
+    background-color: rgb(65, 65, 65);
+    font-size: 1.5rem;
+    border: 1px solid rgb(25, 25, 25);
+    color: white;
+    height: 60px;
+  }
+
+  .addinput:focus {
+    border: none;
+    outline: none;
+  }
+
+  .addbutton {
+    background-color: rgb(43, 90, 209);
+    border-radius: 10px;
+    color: white;
+    width: 100px;
+    height: 60px;
+    border: none;
+  }
+
+  .addbutton:hover {
+    background-color: rgb(20, 71, 198);
+    border: 1px solid white;
+  }
+
+  .error {
+    color: red;
+    display: flex;
+    justify-content: center;
+  }
+
+  .detailcontainer {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-wrap: wrap;
-    margin-top: 20px;
-    gap: 40px;
+    gap: 1rem;
   }
 
   .card {
-    width: 248px;
+    width: 240px;
     height: 300px;
     background-color: black;
     border-radius: 10px;
@@ -238,6 +385,147 @@
     background-color: rgb(21, 21, 21);
     border-radius: 10px;
     font-size: 2rem;
+  }
+
+  .name:hover {
+    cursor: pointer;
+    color: black;
+    background-color: white;
+  }
+
+  .card:hover {
+    color: green;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 1.8rem;
+    padding-left: 12rem;
+    padding-right: 2rem;
+    padding-bottom: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .heading {
+    width: 100%;
+    background-color: black;
+    color: white;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 2rem;
+    height: 60px;
+  }
+
+  .addcontainer {
+    width: 100%;
+  }
+  .add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px;
+    border-radius: 1rem;
+    gap: 2rem;
+    background-color: black;
+  }
+
+  .form {
+    width: 100%;
+  }
+
+  .addinput {
+    text-align: center;
+    border-radius: 10px;
+    background-color: rgb(65, 65, 65);
+    font-size: 1.5rem;
+    border: 1px solid rgb(25, 25, 25);
+    color: white;
+    height: 60px;
+  }
+
+  .addinput:focus {
+    border: none;
+    outline: none;
+  }
+
+  .addbutton {
+    background-color: rgb(43, 90, 209);
+    border-radius: 10px;
+    color: white;
+    width: 130px;
+    height: 60px;
+    border: none;
+  }
+
+  .addbutton:hover {
+    background-color: rgb(20, 71, 198);
+    border: 1px solid white;
+  }
+
+  .error {
+    color: red;
+    display: flex;
+    justify-content: center;
+  }
+
+  .detailcontainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .card {
+    width: 280px;
+    height: 340px;
+    background-color: black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .count {
+    color: green;
+    flex-grow: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    width: 100%;
+    background-color: rgb(21, 21, 21);
+    border-radius: 10px;
+  }
+
+  .count:hover {
+    color: green;
+  }
+
+  .name {
+    color: rgb(209, 209, 209);
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(21, 21, 21);
+    border-radius: 10px;
+    font-size: 1.5rem;
+    font-weight: 700;
   }
 
   .name:hover {
