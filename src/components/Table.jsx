@@ -46,6 +46,9 @@ const Table = ({ vehicles, deleteVehicleWithId }) => {
               {vehicle?.receiptNumber}
             </div>
             <div className={`${styles.tabular} ${styles.date}`}>
+              {vehicle?.agentName}
+            </div>
+            <div className={`${styles.tabular} ${styles.date}`}>
               {localDate}
             </div>
             <div className={`${styles.tabular} ${styles.date}`}>
@@ -74,6 +77,7 @@ const Table = ({ vehicles, deleteVehicleWithId }) => {
           <div className={styles.tabular}>Mobile</div>
           <div className={styles.tabular}> Vehicle</div>
           <div className={`${styles.tabular} ${styles.date}`}>Receipt No</div>
+          <div className={`${styles.tabular} ${styles.date}`}>Agent</div>
           <div className={`${styles.tabular} ${styles.date}`}>Date</div>
           <div className={`${styles.tabular} ${styles.date}`}>Time</div>
           <div className={`${styles.tabular}`}>Delete</div>

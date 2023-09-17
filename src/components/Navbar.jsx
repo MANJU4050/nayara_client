@@ -161,16 +161,7 @@ const Navbar = () => {
           <FontAwesomeIcon className={styles.sidebaricon} icon={faCar} />
           Vehicles
         </div>
-        <div
-          onClick={() => {
-            navigate("/qr");
-            setToggle(!toggle);
-          }}
-          className={styles.sidemenu}
-        >
-          <FontAwesomeIcon className={styles.sidebaricon} icon={faHome} />
-          Register
-        </div>
+        
         <div
           className={`${styles.sidemenu} ${
             activeLink === "/agents" ? styles.activelink : ""
