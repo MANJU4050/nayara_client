@@ -312,6 +312,7 @@
     border: none;
     border-radius: 1.2rem;
     text-align: center;
+    min-width: 300px;
   }
 
   .input::placeholder {
