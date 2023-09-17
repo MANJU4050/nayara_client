@@ -12,18 +12,18 @@ const Login = () => {
   const handleSubmit = async (values, { resetForm }) => {
     try {
       await loginApi(values).then((res) => {
-        setIsSubmit(true)
+        setIsSubmit(true);
         console.log(res.data);
         localStorage.setItem("token", res.data.token);
         toast.success("login successfull");
         navigate("/");
-        setIsSubmit(false)
+        setIsSubmit(false);
       });
     } catch (error) {
-      setIsSubmit(true)
+      setIsSubmit(true);
       console.log(error);
-      toast.error(error.response.data.error)
-      setIsSubmit(false)
+      toast.error(error.response.data.error);
+      setIsSubmit(false);
     }
   };
 
@@ -40,61 +40,67 @@ const Login = () => {
   });
   return (
     <>
-      <Formik
-        initialValues={initialValues}
-        onSubmit={handleSubmit}
-        validationSchema={loginSchema}
-      >
-        {({
-          values,
-          handleSubmit,
-          handleBlur,
-          handleChange,
-          errors,
-          touched,
-        }) => (
-          <form onSubmit={handleSubmit}>
-            <div className={styles.maincontainer}>
-              <div className={styles.loginheading}>
-                <h1>NAYARA</h1>
-              </div>
-              <input
-                className={styles.logininput}
-                type="email"
-                placeholder="Email"
-                name="email"
-                onChange={handleChange}
-                onBlur={handleBlur}
-                value={values.email}
-              />
-              {touched.email && errors.email && (
-                <div className="errormessage">
-                  <p>{errors.email}</p>
-                </div>
-              )}
+      <div className={styles.container}>
+        <div className={styles.formcontainer}>
+          <Formik
+            initialValues={initialValues}
+            onSubmit={handleSubmit}
+            validationSchema={loginSchema}
+          >
+            {({
+              values,
+              handleSubmit,
+              handleBlur,
+              handleChange,
+              errors,
+              touched,
+            }) => (
+              <form onSubmit={handleSubmit} className={styles.form}>
+                <div className={styles.forminsidecontainer}>
+                  <div className={styles.header}>NAYARA</div>
 
-              <input
-                className={styles.logininput}
-                type="password"
-                placeholder="Password"
-                name="password"
-                onChange={handleChange}
-                onBlur={handleBlur}
-                value={values.password}
-              />
+                  <div className={styles.inputcontainer}>
+                    <input
+                      className={styles.input}
+                      type="email"
+                      placeholder="Email"
+                      name="email"
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                      value={values.email}
+                    />
+                    {touched.email && errors.email && (
+                      <div className={styles.error}>{errors.email}</div>
+                    )}
 
-              {touched.password && errors.password && (
-                <div className="errormessage">
-                  <p>{errors.password}</p>
+                    <input
+                      className={styles.input}
+                      type="password"
+                      placeholder="Password"
+                      name="password"
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                      value={values.password}
+                    />
+
+                    {touched.password && errors.password && (
+                      <div className={styles.error}>{errors.password}</div>
+                    )}
+                  </div>
+
+                  <button
+                    className={styles.button}
+                    type="submit"
+                    disabled={isSubmit}
+                  >
+                    {isSubmit ? <Spinner /> : "Login"}
+                  </button>
                 </div>
-              )}
-              <button className={styles.loginbutton} type="submit" disabled={isSubmit}>
-                {isSubmit ? <Spinner /> : "Login"}
-              </button>
-            </div>
-          </form>
-        )}
-      </Formik>
+              </form>
+            )}
+          </Formik>
+        </div>
+      </div>
     </>
   );
 };
