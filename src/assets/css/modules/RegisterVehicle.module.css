@@ -2,49 +2,48 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
 @media screen and (max-width: 767px) {
   .container {
-    height: 100vh; /* Take full viewport height */
+    width: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centering vertically */
-    align-items: center; /* Centering horizontally */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    padding: 1rem;
+    justify-content: center;
+    align-items: center;
     background: #09203f;
     background: linear-gradient(to top, #09203f 0%, #537895 100%);
-    gap: 10px;
+    gap: 1rem;
+    padding: 1rem;
   }
 
-  .headingwraper{
-    display: flex ;
+  .headingwraper {
+    width: 100%;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #053969;
     border-radius: 10px;
-
+    gap: 0.5rem;
+    padding: 0.5rem;
   }
 
   .header {
     font-size: 1.6rem;
     font-weight: bold;
     text-align: center;
-    margin-bottom: 1rem;
     color: white; /* Adjust based on your background */
-    font-family: 'Courier New', Courier, monospace;
-    font-family: 'Space Grotesk';
+    font-family: "Courier New", Courier, monospace;
+    font-family: "Space Grotesk";
   }
 
   .formContainer {
     width: 100%;
     background-color: #ffffff;
-    padding: 1rem;
     border-radius: 0.5rem;
     min-height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0.8rem;
   }
 
   .form {
@@ -60,23 +59,25 @@
     gap: 10px;
   }
 
-  .nayara{
+  .nayara {
     width: 200px;
   }
 
   .inputcontainer {
+    width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     background-color: #e6e6e6;
     border-radius: 20px;
     height: 60px;
     gap: 5px;
+    padding: 1rem;
   }
 
   .input {
+    width: 90%;
     background-color: #e6e6e6;
-    width: 80%;
     padding: 0.5rem;
     border: none;
     border-radius: 0.25rem;
@@ -84,11 +85,40 @@
     height: 40px;
   }
 
+  .couponcontaier {
+    flex-grow: 1;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: none;
+  }
+
+  .inputcoupon {
+    width: 30%;
+    background-color: #e6e6e6;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    height: 40px;
+    text-align: center;
+  }
+
+  .inputcoupon:focus {
+    border: none;
+    outline: none;
+  }
+
+  .inputcoupon::placeholder {
+    font-size: 1.1rem;
+  }
+
   .input::placeholder {
     font-size: 1.1rem;
   }
 
-  .input:focus{
+  .input:focus {
     border: none;
     outline: none;
   }
@@ -113,17 +143,515 @@
   .error {
     height: 1.5rem;
     font-size: 1rem;
-    color:red
+    color: red;
+  }
+
+  .servererror {
+    border: 1px solid red;
+    color: red;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    min-height: 1.8rem;
+  }
+
+  .registering {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
   }
 }
 
-/* Tablet */
-@media (min-width: 768px) {
-  input[type="text"] {
-    width: 70%;
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #09203f;
+    background: linear-gradient(to top, #09203f 0%, #537895 100%);
+    gap: 1rem;
+    padding: 5rem;
   }
 
-  button[type="submit"] {
-    font-size: 1.2rem;
+  .headingwraper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #053969;
+    border-radius: 10px;
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .header {
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-align: center;
+    color: white; /* Adjust based on your background */
+    font-family: "Courier New", Courier, monospace;
+    font-family: "Space Grotesk";
+  }
+
+  .formContainer {
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    min-height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.8rem;
+  }
+
+  .form {
+    width: 100%;
+  }
+
+  .forminsidecontainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .nayara {
+    width: 200px;
+  }
+
+  .inputcontainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e6e6e6;
+    border-radius: 20px;
+    height: 60px;
+    gap: 5px;
+    padding: 1rem;
+  }
+
+  .input {
+    width: 90%;
+    background-color: #e6e6e6;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    height: 40px;
+  }
+
+  .couponcontaier {
+    flex-grow: 1;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: none;
+  }
+
+  .inputcoupon {
+    width: 30%;
+    background-color: #e6e6e6;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    height: 40px;
+    text-align: center;
+  }
+
+  .inputcoupon:focus {
+    border: none;
+    outline: none;
+  }
+
+  .inputcoupon::placeholder {
+    font-size: 1.1rem;
+  }
+
+  .input::placeholder {
+    font-size: 1.1rem;
+  }
+
+  .input:focus {
+    border: none;
+    outline: none;
+  }
+
+  .icon {
+    color: #666666;
+    height: 20px;
+  }
+
+  .button {
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    border: none;
+    border-radius: 0.25rem;
+    color: white;
+    width: 200px;
+    height: 60px;
+    margin-top: 20px;
+    font-size: 1.5rem;
+  }
+
+  .error {
+    height: 1.5rem;
+    font-size: 1rem;
+    color: red;
+  }
+
+  .servererror {
+    border: 1px solid red;
+    color: red;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 3rem;
+  }
+
+  .registering {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
+
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  .container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #09203f;
+    background: linear-gradient(to top, #09203f 0%, #537895 100%);
+    gap: 1rem;
+    padding: 15rem;
+  }
+
+  .headingwraper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #053969;
+    border-radius: 10px;
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .header {
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-align: center;
+    color: white; /* Adjust based on your background */
+    font-family: "Courier New", Courier, monospace;
+    font-family: "Space Grotesk";
+  }
+
+  .formContainer {
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.8rem;
+  }
+
+  .form {
+    width: 100%;
+  }
+
+  .forminsidecontainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .nayara {
+    width: 200px;
+  }
+
+  .inputcontainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e6e6e6;
+    border-radius: 20px;
+    height: 60px;
+    gap: 5px;
+    padding: 1rem;
+  }
+
+  .input {
+    width: 90%;
+    background-color: #e6e6e6;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    height: 40px;
+  }
+
+  .couponcontaier {
+    flex-grow: 1;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: none;
+  }
+
+  .inputcoupon {
+    width: 30%;
+    background-color: #e6e6e6;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    height: 40px;
+    text-align: center;
+  }
+
+  .inputcoupon:focus {
+    border: none;
+    outline: none;
+  }
+
+  .inputcoupon::placeholder {
+    font-size: 1.1rem;
+  }
+
+  .input::placeholder {
+    font-size: 1.1rem;
+  }
+
+  .input:focus {
+    border: none;
+    outline: none;
+  }
+
+  .icon {
+    color: #666666;
+    height: 20px;
+  }
+
+  .button {
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    border: none;
+    border-radius: 0.25rem;
+    color: white;
+    width: 200px;
+    height: 60px;
+    margin-top: 20px;
+    font-size: 1.5rem;
+  }
+
+  .error {
+    height: 1.5rem;
+    font-size: 1rem;
+    color: red;
+  }
+
+  .servererror {
+    border: 1px solid red;
+    color: red;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 3rem;
+  }
+
+  .registering {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #09203f;
+    background: linear-gradient(to top, #09203f 0%, #537895 100%);
+    gap: 1rem;
+    padding: 15rem;
+  }
+
+  .headingwraper {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #053969;
+    border-radius: 10px;
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .header {
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-align: center;
+    color: white; /* Adjust based on your background */
+    font-family: "Courier New", Courier, monospace;
+    font-family: "Space Grotesk";
+  }
+
+  .formContainer {
+    width: 60%;
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    min-height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.8rem;
+  }
+
+  .form {
+    width: 60%;
+  }
+
+  .forminsidecontainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .nayara {
+    width: 200px;
+  }
+
+  .inputcontainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e6e6e6;
+    border-radius: 20px;
+    height: 60px;
+    gap: 5px;
+    padding: 1rem;
+  }
+
+  .input {
+    width: 90%;
+    background-color: #e6e6e6;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    height: 40px;
+  }
+
+  .couponcontaier {
+    flex-grow: 1;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: none;
+  }
+
+  .inputcoupon {
+    width: 30%;
+    background-color: #e6e6e6;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    height: 40px;
+    text-align: center;
+  }
+
+  .inputcoupon:focus {
+    border: none;
+    outline: none;
+  }
+
+  .inputcoupon::placeholder {
+    font-size: 1.1rem;
+  }
+
+  .input::placeholder {
+    font-size: 1.1rem;
+  }
+
+  .input:focus {
+    border: none;
+    outline: none;
+  }
+
+  .icon {
+    color: #666666;
+    height: 20px;
+  }
+
+  .button {
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    border: none;
+    border-radius: 0.25rem;
+    color: white;
+    width: 200px;
+    height: 60px;
+    margin-top: 20px;
+    font-size: 1.5rem;
+  }
+
+  .error {
+    height: 1.5rem;
+    font-size: 1rem;
+    color: red;
+  }
+
+  .servererror {
+    border: 1px solid red;
+    color: red;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 3rem;
+  }
+
+  .registering {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
   }
 }

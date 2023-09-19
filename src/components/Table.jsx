@@ -5,16 +5,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Modal from "./Modal";
 
 const Table = ({ vehicles, deleteVehicleWithId }) => {
-  const [isModalOpen, setModalOpen] = useState(false);
-
-  const openModal = () => {
-    setModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setModalOpen(false);
-  };
-
   let count = 0;
   const vehicleList =
     vehicles &&

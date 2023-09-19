@@ -79,7 +79,7 @@ const Agent = () => {
           <Spinner animation="border" role="status" variant="warning"></Spinner>
         </div>
       ) : (
-        <div div className={styles.container}>
+        <div className={styles.container}>
         <div className={styles.heading}>AGENTS</div>
 
           <Formik
