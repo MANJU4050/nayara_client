@@ -59,7 +59,7 @@ function App() {
           <Route path="login" element={<Login />} />
           <Route path="*" element={<PageNotFound />} />
           <Route
-            path="/register/:agentName/:number/:agentId"
+            path="/register/:agentName/:agentId"
             element={<RegisterVehicle />}
           />
           <Route path="/success" element={<RegisterSuccess />} />

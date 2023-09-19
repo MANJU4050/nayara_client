@@ -9,8 +9,8 @@ import { toast } from "react-toastify";
 
 const Dashboard = () => {
   const [vehicles, setVehicles] = useState([]);
-  const [today, setToday] = useState("");
-  const [total, setTotal] = useState("");
+  const [today, setToday] = useState(0);
+  const [total, setTotal] = useState(0);
   const [isLoad, setIsLoad] = useState(false);
   const [reFetch, setReFetch] = useState(false);
 
@@ -26,7 +26,6 @@ const Dashboard = () => {
               new Date(b.registrationDate) - new Date(a.registrationDate)
           );
           setVehicles(sortedVehicles);
-          console.log(response.data);
         });
 
         setIsLoad(false);

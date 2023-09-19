@@ -10,7 +10,6 @@ const DownloadCSV = () => {
       try {
         await getCoupons().then((res) => {
           setData(res?.data?.coupons);
-          console.log(res.data.coupons);
         });
       } catch (error) {
         console.log(error);

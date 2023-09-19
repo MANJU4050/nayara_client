@@ -21,7 +21,6 @@ const Vehicles = () => {
               new Date(b.registrationDate) - new Date(a.registrationDate)
           );
           setVehicles(sortedVehicles);
-          console.log(response.data.vehicles);
           setIsLoad(false);
         });
       } catch (error) {

@@ -23,18 +23,15 @@ const QrCodeCard = ({ agent, inputText }) => {
       <div key={agent?.id} className={styles.qrcontainer}>
         <QRCodeSVG
           className={styles.qr}
-          value={`${inputText}/${agent?.name}/${agent?.number}/${agent?._id}`}
+          value={`${inputText}/${agent?.name}/${agent?._id}`}
           size={384}
           fgColor={"#000000"}
           bgColor={"#ffffff"}
           level={"L"}
           includeMargin={false}
-         
         />
         <div onClick={handleDownload} className={styles.namewraper}>
-          <div  className={styles.agentname}>
-            {agent?.name}
-          </div>
+          <div className={styles.agentname}>{agent?.name}</div>
           <FontAwesomeIcon className={styles.download} icon={faDownload} />
         </div>
       </div>

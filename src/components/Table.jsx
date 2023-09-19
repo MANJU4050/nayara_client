@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import styles from "../assets/css/modules/Table.module.css";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Modal from "./Modal";
 
 const Table = ({ vehicles, deleteVehicleWithId }) => {
   let count = 0;
@@ -33,7 +32,7 @@ const Table = ({ vehicles, deleteVehicleWithId }) => {
             <div className={styles.tabular}>{vehicle?.mobile}</div>
             <div className={styles.tabular}>{vehicle?.vehicleNumber}</div>
             <div className={`${styles.tabular} ${styles.date}`}>
-              {vehicle?.receiptNumber}
+              {vehicle?.uniqueId}
             </div>
             <div className={`${styles.tabular} ${styles.date}`}>
               {vehicle?.agentName}
@@ -66,7 +65,7 @@ const Table = ({ vehicles, deleteVehicleWithId }) => {
           <div className={styles.tabular}>Name</div>
           <div className={styles.tabular}>Mobile</div>
           <div className={styles.tabular}> Vehicle</div>
-          <div className={`${styles.tabular} ${styles.date}`}>Receipt No</div>
+          <div className={`${styles.tabular} ${styles.date}`}>Coupon</div>
           <div className={`${styles.tabular} ${styles.date}`}>Agent</div>
           <div className={`${styles.tabular} ${styles.date}`}>Date</div>
           <div className={`${styles.tabular} ${styles.date}`}>Time</div>

@@ -488,5 +488,16 @@
     font-size: 1rem;
     color: red;
   }
+
+  .servererror{
+    min-width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+    min-height: 50px;
+    color: red;
+    background-color: #222424;
+  }
   
 }

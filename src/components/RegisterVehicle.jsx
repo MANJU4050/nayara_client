@@ -49,7 +49,10 @@ const RegisterVehicle = () => {
     mobile: Yup.string()
       .matches(/^\d{10}$/, "Enter Valid mobile number")
       .required("Mobile number is required"),
-    vehicleNumber: Yup.string().required("Vehicle number is required"),
+    vehicleNumber: Yup.string()
+      .required("Vehicle number is required")
+      .min(5, "invalid vehicle number")
+      .max(10, "vehicle number too long"),
     uniqueId1: Yup.string().required("coupon code required"),
     uniqueId2: Yup.string().required("coupon code required"),
     uniqueId3: Yup.string().required("coupon code required"),
@@ -77,7 +80,6 @@ const RegisterVehicle = () => {
       setIsSubmiting(true);
 
       const uniqueId = `${values.uniqueId1}-${values.uniqueId2}-${values.uniqueId3}`;
-      console.log(values.uniqueId);
       const { name, mobile, vehicleNumber, agentId, agentName } = values;
       await addVehicleApi({
         name,
@@ -96,7 +98,9 @@ const RegisterVehicle = () => {
     } catch (error) {
       setIsSubmiting(false);
       setIsError(true);
-      error?.response && error?.response?.data && setError(error.response.data);
+      error.response &&
+        error.response.data?.error &&
+        setError(error.response.data?.error);
       console.log(error);
     }
   };

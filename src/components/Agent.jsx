@@ -21,7 +21,6 @@ const Agent = () => {
       try {
         setIsLoading(true);
         await getAgents().then((res) => {
-          console.log(res.data);
           setAgents(res.data);
           setInitialValues((prev) => {
             return { ...prev, number: res.data?.length + 1 };
@@ -47,6 +46,7 @@ const Agent = () => {
       });
       setIsSubmitting(false);
     } catch (error) {
+      setIsSubmitting(false)
       toast.error(error.response.data.error);
       console.log(error);
     }

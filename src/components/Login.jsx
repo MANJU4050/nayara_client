@@ -4,27 +4,34 @@ import styles from "../assets/css/modules/Login.module.css";
 import * as Yup from "yup";
 import { loginApi } from "../api/users";
 import { useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
 import { Spinner } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 const Login = () => {
   const navigate = useNavigate();
   const [isSubmit, setIsSubmit] = useState(false);
+  const [isError, setIsError] = useState(false);
+  const [error, setError] = useState();
+  const [isSuccess, setIsSuccess] = useState(false);
   const handleSubmit = async (values, { resetForm }) => {
+    setIsSubmit(true);
     try {
-      await loginApi(values).then((res) => {
-        setIsSubmit(true);
-        console.log(res.data);
-        localStorage.setItem("token", res.data.token);
-        toast.success("login successfull");
-        navigate("/");
-        resetForm();
-        setIsSubmit(false);
-      });
-    } catch (error) {
-      setIsSubmit(true);
-      console.log(error);
-      toast.error(error.response.data.error);
+      const res = await loginApi(values);
+      localStorage.setItem("token", res.data?.token); // Not recommended for production; use HttpOnly cookies
       setIsSubmit(false);
+
+      setIsSuccess(true);
+      navigate("/");
+      resetForm();
+      setIsError(false);
+
+      // Maybe set a success state and display a message?
+    } catch (error) {
+      setIsSubmit(false);
+      setIsError(true);
+      const errorMessage =
+        error.response?.data?.error || "An unknown error occurred";
+      setError(errorMessage);
     }
   };
 
@@ -37,7 +44,10 @@ const Login = () => {
     email: Yup.string()
       .email("enter valid email")
       .required("email is required"),
-    password: Yup.string().required("password is required"),
+    password: Yup.string()
+      .required("password is required")
+      .min(8, "password should be atleast 8 characters")
+      .max(15, "maximum 15 characters"),
   });
   return (
     <>
@@ -58,6 +68,10 @@ const Login = () => {
             }) => (
               <form onSubmit={handleSubmit} className={styles.form}>
                 <div className={styles.forminsidecontainer}>
+                  {isError && error && (
+                    <div className={styles.servererror}>{error}</div>
+                  )}
+
                   <div className={styles.header}>NAYARA</div>
 
                   <div className={styles.inputcontainer}>
@@ -96,7 +110,13 @@ const Login = () => {
                     type="submit"
                     disabled={isSubmit}
                   >
-                    {isSubmit ? <Spinner /> : "Login"}
+                    {isSubmit ? (
+                      <Spinner />
+                    ) : isSuccess ? (
+                      <FontAwesomeIcon icon={faCircleCheck} />
+                    ) : (
+                      "Login"
+                    )}
                   </button>
                 </div>
               </form>

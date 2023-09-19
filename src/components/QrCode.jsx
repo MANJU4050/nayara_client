@@ -16,7 +16,6 @@ const QrCode = () => {
       try {
         setIsLoad(true);
         await getAgents().then((res) => {
-          console.log(res.data);
           setAgents(res.data);
         });
         setIsLoad(false);
