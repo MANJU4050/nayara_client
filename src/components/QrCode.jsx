@@ -8,7 +8,7 @@ const QrCode = () => {
   const [agents, setAgents] = useState([]);
   const [isLoad, setIsLoad] = useState(false);
   const [inputText, setInputText] = useState(
-    "https://nayaraprizecontest.netlify.app/register"
+    "https://nayaraprizecontest.netlify.app"
   );
 
   useEffect(() => {

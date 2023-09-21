@@ -78,7 +78,7 @@ const Navbar = () => {
         doc.text(`Name: ${vehicle.name}`, x + 2, y + 8);
         doc.text(`Mobile: ${vehicle.mobile}`, x + 2, y + 14);
         doc.text(`Vehicle: ${vehicle.vehicleNumber}`, x + 2, y + 20);
-        doc.text(`Receipt: ${vehicle.receiptNumber}`, x + 2, y + 26);
+        doc.text(`Receipt: ${vehicle.uniqueId}`, x + 2, y + 26);
       }
     }
 

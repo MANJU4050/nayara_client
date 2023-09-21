@@ -12,7 +12,6 @@ import RegisterVehicle from "./components/RegisterVehicle";
 import RegisterSuccess from "./components/RegisterSuccess";
 import PageNotFound from "./components/PageNotFound";
 import DownloadCSV from "./components/DownloadCSV";
-import CouponList from "./components/CouponList";
 
 function App() {
   return (
@@ -64,7 +63,6 @@ function App() {
           />
           <Route path="/success" element={<RegisterSuccess />} />
           <Route path="/csv" element={<DownloadCSV />} />
-          <Route path="/coupons" element={<CouponList/>} />
         </Routes>
       </Router>
     </>
