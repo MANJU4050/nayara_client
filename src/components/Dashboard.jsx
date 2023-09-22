@@ -291,7 +291,7 @@ const Dashboard = () => {
                 </BarChart>
               </ResponsiveContainer>
             </div>
-            <div className={styles.charts}>
+            <div className={`${styles.charts} ${styles.pie}`}>
               <ResponsiveContainer width="100%" height="100%">
                 <PieChart>
                   <Pie

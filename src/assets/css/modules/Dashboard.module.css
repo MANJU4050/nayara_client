@@ -28,13 +28,11 @@
   .detailslabel {
     color: #89898b;
     font-weight: bold;
-
-    
   }
 
   .chartcontainer {
     width: 100%;
-    height: 400px;
+    height: 500px;
     display: flex;
     gap: 0.5rem;
     flex-direction: column;
@@ -45,17 +43,21 @@
   }
 
   .charts {
+    height: 50%;
     width: 100%;
-    height: 100%;
     border-radius: 1rem;
     border: 0.3rem solid black;
     background-color: black;
   }
+
+  .pie{
+    width: 100%;
+    height: 300px;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-
-  .container{
+  .container {
     height: 100vh;
   }
   .detailcontainer {
