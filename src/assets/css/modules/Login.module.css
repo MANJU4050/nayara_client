@@ -117,6 +117,17 @@
     font-size: 1rem;
     color: rgb(255, 0, 0);
   }
+
+  .servererror{
+    width: 65%;
+    min-height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+    color: red;
+    background-color: #222424;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -238,6 +249,17 @@
     height: 1.5rem;
     font-size: 1rem;
     color: rgb(255, 0, 0);
+  }
+
+  .servererror{
+    width: 60%;
+    min-height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+    color: red;
+    background-color: #222424;
   }
 }
 
@@ -362,6 +384,17 @@
     height: 1.5rem;
     font-size: 1rem;
     color: red;
+  }
+
+  .servererror{
+    width: 60%;
+    min-height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+    color: red;
+    background-color: #222424;
   }
 }
 

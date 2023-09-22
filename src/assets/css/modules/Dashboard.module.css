@@ -28,10 +28,36 @@
   .detailslabel {
     color: #89898b;
     font-weight: bold;
+
+    
+  }
+
+  .chartcontainer {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.1rem;
+    padding-top: 0.5rem;
+  }
+
+  .charts {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    border: 0.3rem solid black;
+    background-color: black;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+
+  .container{
+    height: 100vh;
+  }
   .detailcontainer {
     width: 100%;
     padding: 5px;
@@ -61,6 +87,25 @@
   .detailslabel {
     color: #89898b;
     font-weight: bold;
+  }
+
+  .chartcontainer {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .charts {
+    width: 90%;
+    height: 100%;
+    border-radius: 1rem;
+    padding: 1rem;
+    border: 0.3rem solid black;
+    background-color: black;
   }
 }
 
@@ -105,6 +150,24 @@
     color: #89898b;
     font-weight: bold;
   }
+
+  .chartcontainer {
+    width: 99%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .charts {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    padding: 1rem;
+    border: 0.3rem solid black;
+    background-color: black;
+  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -119,6 +182,7 @@
     padding-right: 4rem;
     gap: 10px;
     color: rgb(14, 22, 22);
+    padding-bottom: 1.5rem;
   }
   .detailcontainer {
     width: 100%;
@@ -126,7 +190,7 @@
     display: flex;
     justify-content: center;
     gap: 10px;
-    border-radius: 10px;
+    border-radius: 1rem;
   }
 
   .detailscontainer {
@@ -138,7 +202,7 @@
     justify-content: space-around;
     align-items: center;
     color: white;
-    border-radius: 5px;
+    border-radius: 1rem;
   }
 
   .detailsvalue {
@@ -148,5 +212,23 @@
   .detailslabel {
     color: #89898b;
     font-weight: bold;
+  }
+
+  .chartcontainer {
+    width: 99%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .charts {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    padding: 1rem;
+    border: 0.3rem solid black;
+    background-color: black;
   }
 }

@@ -1,29 +1,19 @@
 @media screen and (max-width: 767px) {
   .card {
     display: flex;
-    gap: 10px;
-    background-color: white;
-    min-height: 250px;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .qr {
-    width: 200px;
-    height: 200px;
-  }
-
-  .qrcontainer {
-    height: 300px;
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    padding: 10px;
+    padding: 1rem;
+    background-color: white;
+  }
+
+  .qr {
+    width: 250px;
   }
 
   .namewraper {
-    width: 200px;
+    width: 250px;
     height: 40px;
     background-color: rgb(0, 0, 0);
     display: flex;
@@ -32,7 +22,6 @@
     position: relative;
   }
   .agentname {
-    width: 60px;
     color: white;
   }
 
@@ -53,29 +42,16 @@
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .card {
     display: flex;
-    gap: 5px;
-    background-color: white;
-    min-height: 250px;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .qr {
-    width: 384px;
-    height: 384px;
-  }
-
-  .qrcontainer {
-    height: 550px;
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    padding: 10px;
+    padding: 2rem;
+    gap: 2rem;
+    background-color: white;
   }
 
   .namewraper {
-    width: 384px;
+    width: 280px;
     height: 60px;
     background-color: rgb(0, 0, 0);
     display: flex;
@@ -91,12 +67,11 @@
     justify-content: space-evenly;
   }
   .agentname {
-    width: 60px;
     color: white;
   }
 
   .download {
-    left: 88%;
+    left: 85%;
     position: absolute;
     color: blueviolet;
   }
@@ -105,17 +80,12 @@
 @media screen and (min-width: 1024px) and (max-width: 1439px) {
   .card {
     display: flex;
-    gap: 5px;
-    background-color: white;
-    min-height: 250px;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    border: 1px solid black;
-  }
-
-  .qr {
-    width: 280px;
-    height: 280px;
+    justify-content: space-evenly;
+    padding: 1rem;
+    gap: 1rem;
+    background-color: white;
   }
 
   .qrcontainer {
@@ -159,26 +129,12 @@
 @media screen and (min-width: 1440px) {
   .card {
     display: flex;
-    gap: 5px;
-    background-color: white;
-    min-height: 250px;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .qr {
-    width: 280px;
-    height: 280px;
-  }
-
-  .qrcontainer {
-    height: 400px;
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
     padding: 1rem;
     gap: 1rem;
+    background-color: white;
   }
 
   .namewraper {
