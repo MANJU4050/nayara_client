@@ -27,6 +27,7 @@ const Agent = () => {
           });
         });
         setIsLoading(false);
+        setIsError(false);
       } catch (error) {
         setIsError(true);
         console.log(error);
@@ -46,7 +47,7 @@ const Agent = () => {
       });
       setIsSubmitting(false);
     } catch (error) {
-      setIsSubmitting(false)
+      setIsSubmitting(false);
       toast.error(error.response.data.error);
       console.log(error);
     }
@@ -57,6 +58,33 @@ const Agent = () => {
       .max(15, "max characters is 15")
       .min(3, "atleast 3 characters are required"),
   });
+
+  if (isLoading) {
+    return (
+      <div
+        className="d-flex justify-content-center align-items-center"
+        style={{ height: "100vh" }}
+      >
+        <Spinner animation="border" role="status" variant="warning"></Spinner>
+      </div>
+    );
+  }
+
+  if (agents?.length === 0) {
+    return (
+      <div className={styles.warningcontainer}>
+        <div className={styles.warningmessage}>No Agents found</div>
+      </div>
+    );
+  }
+
+  if (isError) {
+    return (
+      <div className={styles.errorcontainer}>
+        <div className={styles.errormessage}>ERROR</div>
+      </div>
+    );
+  }
 
   const agentList =
     agents &&
@@ -71,58 +99,52 @@ const Agent = () => {
 
   return (
     <div className={styles.container}>
-      {isLoading ? (
-        <div
-          className="d-flex justify-content-center align-items-center"
-          style={{ height: "100vh" }}
-        >
-          <Spinner animation="border" role="status" variant="warning"></Spinner>
-        </div>
-      ) : (
-        <div className={styles.container}>
+      (
+      <div className={styles.container}>
         <div className={styles.heading}>AGENTS</div>
 
-          <Formik
-            onSubmit={handleSubmit}
-            initialValues={initialValues}
-            validationSchema={validationSchema}
-          >
-            {({
-              values,
-              handleSubmit,
-              handleChange,
-              errors,
-              touched,
-              handleBlur,
-            }) => (
-              <form onSubmit={handleSubmit} className={styles.form}>
+        <Formik
+          onSubmit={handleSubmit}
+          initialValues={initialValues}
+          validationSchema={validationSchema}
+        >
+          {({
+            values,
+            handleSubmit,
+            handleChange,
+            errors,
+            touched,
+            handleBlur,
+          }) => (
+            <form onSubmit={handleSubmit} className={styles.form}>
+              <div className={styles.addcontainer}>
+                <div className={styles.add}>
+                  <input
+                    className={styles.addinput}
+                    type="text"
+                    placeholder="Agent Name"
+                    name="name"
+                    value={values.name}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    autoComplete="off"
+                  />
 
-                <div className={styles.addcontainer}>
-                  <div className={styles.add}>
-                    <input
-                      className={styles.addinput}
-                      type="text"
-                      placeholder="Agent Name"
-                      name="name"
-                      value={values.name}
-                      onChange={handleChange}
-                      onBlur={handleBlur}
-                      autoComplete="off"
-                    />
-
-                    <button className={styles.addbutton} disabled={isSubmiting}> {isSubmiting ? <Spinner /> : "Register"}</button>
-                  </div>
-                  {touched.name && errors.name && (
-                    <div className={styles.error}>{errors?.name}</div>
-                  )}
+                  <button className={styles.addbutton} disabled={isSubmiting}>
+                    {" "}
+                    {isSubmiting ? <Spinner /> : "Register"}
+                  </button>
                 </div>
-              </form>
-            )}
-          </Formik>
+                {touched.name && errors.name && (
+                  <div className={styles.error}>{errors?.name}</div>
+                )}
+              </div>
+            </form>
+          )}
+        </Formik>
 
-          <div className={styles.detailcontainer}>{agentList}</div>
-        </div>
-      )}
+        <div className={styles.detailcontainer}>{agentList}</div>
+      </div>
     </div>
   );
 };

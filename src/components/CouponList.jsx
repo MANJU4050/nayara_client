@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
+import { getCoupons } from "../api/coupons";
+import DownloadCSV from "./DownloadCSV";
 
 const CouponList = () => {
   const [coupons, setCoupons] = useState([]);
@@ -10,9 +11,7 @@ const CouponList = () => {
   const fetchData = async () => {
     try {
       setLoading(true);
-      const res = await axios.get(
-        `http://localhost:4000/api/users/get-coupons?page=${page}&limit=50`
-      );
+      const res = await getCoupons(1);
       setCoupons([...coupons, ...res.data.coupons]);
       setTotalPages(res.data.totalPages);
       setPage(page + 1);
@@ -48,11 +47,12 @@ const CouponList = () => {
 
   return (
     <div>
+      <DownloadCSV />
       <h1>Coupons</h1>
       <div>{coupons.length}</div>
       <ul>
         {coupons.map((coupon, index) => (
-          <li key={index}>{coupon?.uniqueId}</li> // Replace 'code' with an actual property name from your coupon object
+          <li key={index}>{coupon?.uniqueId}</li>
         ))}
       </ul>
 

@@ -11,7 +11,7 @@ import QrCode from "./components/QrCode";
 import RegisterVehicle from "./components/RegisterVehicle";
 import RegisterSuccess from "./components/RegisterSuccess";
 import PageNotFound from "./components/PageNotFound";
-import DownloadCSV from "./components/DownloadCSV";
+import Coupon from "./components/Coupon";
 
 function App() {
   return (
@@ -47,6 +47,14 @@ function App() {
               }
             />
             <Route
+              path="coupons"
+              element={
+                <ProtectedRoute>
+                  <Coupon />
+                </ProtectedRoute>
+              }
+            />
+            <Route
               path="qr"
               element={
                 <ProtectedRoute>
@@ -62,7 +70,6 @@ function App() {
             element={<RegisterVehicle />}
           />
           <Route path="/success" element={<RegisterSuccess />} />
-          <Route path="/csv" element={<DownloadCSV />} />
         </Routes>
       </Router>
     </>

@@ -3,12 +3,10 @@ import { getCoupons } from "../api/coupons";
 const DownloadCSV = () => {
   const [data, setData] = useState([]);
 
-  // Fetch data from API
   useEffect(() => {
-    // Replace this with your actual API call
     const fetchData = async () => {
       try {
-        await getCoupons().then((res) => {
+        await getCoupons(1).then((res) => {
           setData(res?.data?.coupons);
         });
       } catch (error) {
@@ -19,10 +17,9 @@ const DownloadCSV = () => {
     fetchData();
   }, []);
 
-  // Create CSV Blob in chunks
   const createCSVBlob = (data) => {
     const header =
-      "uniqueId1,uniqueId2,uniqueId3,uniqueId4,uniqueId5,uniqueId6,uniqueId7,uniqueId8,uniqueId9,uniqueId10\n";
+      "COUPONCODESET_1,COUPONCODESET_2,COUPONCODESET_3,COUPONCODESET_4,COUPONCODESET_5,COUPONCODESET_6,COUPONCODESET_7,COUPONCODESET_8,COUPONCODESET_9,COUPONCODESET_10\n";
     const blobParts = [header];
 
     for (let i = 0; i < data.length; i += 10) {

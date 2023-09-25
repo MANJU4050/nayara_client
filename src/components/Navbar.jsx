@@ -14,6 +14,7 @@ import {
   faUsers,
   faFileArrowDown,
   faBars,
+  faTicket
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -173,6 +174,19 @@ const Navbar = () => {
         >
           <FontAwesomeIcon className={styles.sidebaricon} icon={faUsers} />
           Agent
+        </div>
+
+        <div
+          className={`${styles.sidemenu} ${
+            activeLink === "/coupons" ? styles.activelink : ""
+          }`}
+          onClick={() => {
+            navigate("/coupons");
+            setToggle(!toggle);
+          }}
+        >
+          <FontAwesomeIcon className={styles.sidebaricon} icon={faTicket} />
+          Coupons
         </div>
         <div
           className={`${styles.sidemenu} ${

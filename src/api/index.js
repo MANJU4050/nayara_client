@@ -16,6 +16,7 @@ const securedEndpoints = [
   "delete-vehicle",
   "get-all-agents",
   "register-agent",
+  "get-coupons"
 ];
 
 // Add a request interceptor to include the JWT for specific endpoints

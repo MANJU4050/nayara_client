@@ -11,7 +11,6 @@ import {
   Cell,
   XAxis,
   YAxis,
-  CartesianGrid,
   Tooltip,
   Legend,
   ResponsiveContainer,
@@ -124,6 +123,7 @@ const Dashboard = () => {
   const [total, setTotal] = useState(0);
   const [isLoad, setIsLoad] = useState(false);
   const [reFetch, setReFetch] = useState(false);
+  const [isError, setIsError] = useState(false);
 
   const datase = [
     { registrationDate: "2023-09-22T00:00:00.000Z" },
@@ -234,9 +234,10 @@ const Dashboard = () => {
             .splice(0, 5);
           setVehicles(sortedVehicles);
         });
-
         setIsLoad(false);
+        setIsError(false);
       } catch (error) {
+        setIsError(true);
         console.log(error);
       }
 
@@ -257,6 +258,22 @@ const Dashboard = () => {
       toast.error(error.response.data.error);
     }
   };
+
+  if (vehicles?.length === 0) {
+    return (
+      <div className={styles.warningcontainer}>
+        <div className={styles.warningmessage}>NO registrations found</div>
+      </div>
+    );
+  }
+
+  if (isError) {
+    return (
+      <div className={styles.errorcontainer}>
+        <div className={styles.errormessage}>ERROR</div>
+      </div>
+    );
+  }
 
   return (
     <>
